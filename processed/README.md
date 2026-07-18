@@ -8,14 +8,14 @@
 
 ```
 processed/
-├── 2024/
-│   ├── notes.csv          ← 全部 note 一行一条
-│   ├── companies.csv      ← 公司维度聚合
-│   ├── topics.json        ← 议题聚类结果
-│   └── ...
-└── 2025/
+└── 2026/                  ← 当前活跃年度
+    ├── notes.csv          ← 全部 note 一行一条
+    ├── companies.csv      ← 公司维度聚合
+    ├── topics.json        ← 议题聚类结果
     └── ...
 ```
+
+> 历史年度等以后需要对比时再启用。
 
 ## 当前 schema
 
@@ -30,7 +30,7 @@ processed/
 | `title` | str | 笔记标题 |
 | `duration_sec` | int | 音频时长 |
 | `transcript_len` | int | 文字稿字数 |
-| `tags` | str | 用 `|` 分隔 |
+| `tags` | str | 用 `\|` 分隔 |
 | `source_path` | str | 对应 `data/<year>/` 下的源文件路径 |
 
 ### `companies.csv`
@@ -45,12 +45,12 @@ processed/
 
 ```json
 {
-  "year": 2025,
+  "year": 2026,
   "topics": [
     {
       "topic_id": "t01",
       "label": "大模型应用",
-      "note_ids": ["2025-07-XX__...", "..."],
+      "note_ids": ["2026-07-XX__...", "..."],
       "keywords": ["应用", "落地", "场景"]
     }
   ]
@@ -61,10 +61,10 @@ processed/
 
 ```bash
 # 归一化所有 note 到 CSV
-python scripts/normalize.py --year 2025
+python scripts/normalize.py --year 2026
 
 # 生成 companies.csv（频次统计）
-python scripts/analyze.py --year 2025 --kind companies
+python scripts/analyze.py --year 2026 --kind companies
 ```
 
 ## 入库策略

@@ -9,21 +9,19 @@
 
 ```
 outputs/
-├── 2024/
-│   ├── charts/            ← 图（PNG / SVG / HTML）
-│   ├── reports/           ← 报告（MD / PDF / Notebook）
-│   └── compare/           ← 跨议题 / 跨年对比
-└── 2025/
-    ├── charts/
-    ├── reports/
-    └── compare/
+└── 2026/                  ← 当前活跃年度
+    ├── charts/            ← 图（PNG / SVG / HTML）
+    ├── reports/           ← 报告（MD / PDF / Notebook）
+    └── compare/           ← 跨议题对比（跨年对比等需要时再启用）
 ```
 
 | 子目录 | 用途 | 命名示例 |
 | --- | --- | --- |
-| `charts/` | 单图、单可视化 | `2025-07-31__company_mentions.png` |
-| `reports/` | 完整分析报告 | `2025-waic-recap.md` |
-| `compare/` | 跨年 / 跨议题对比 | `2024-vs-2025-topics.md` |
+| `charts/` | 单图、单可视化 | `2026-07-31__company_mentions.png` |
+| `reports/` | 完整分析报告 | `2026-waic-recap.md` |
+| `compare/` | 跨议题对比 | `cross_industry_topics.md` |
+
+> 历史年度（`outputs/2024/`、`outputs/2025/`）等以后需要做跨年对比时再启用。
 
 ---
 

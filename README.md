@@ -2,6 +2,8 @@
 
 > **个人项目**：把得到笔记里 WAIC 大会的采访内容，做成自己的年度二阶解读档案。
 
+> 当前年度：**2026**（WAIC 2026 · 2026-07-19 进行中）
+
 ---
 
 ## 🎯 这是什么
@@ -9,6 +11,7 @@
 - **不是开源协作大工程**。Owner = 我自己，PR 是补充，不卡流程。
 - **不是采访生产方**。采访由得到团队（罗振宇 / 快刀青衣）做，我只做**二阶解读**。
 - **是个人年度归档**。WAIC 每年都有，每年我都会拉数据、做整理、出产物。
+- **目前活跃年度只有 2026**。历史归档等以后需要对比时再启用。
 
 ---
 
@@ -34,7 +37,7 @@
 | **整理后数据** | `processed/<year>/` | 归一化、清洗后的稳定 schema |
 | **我的产出** | `outputs/<year>/` | 图表、报告、跨年对比 |
 
-**按年分目录** —— 今年是 `2025/`，明年 `2026/`，后年 `2027/`，每年都是独立单元。
+**按年分目录** —— 今年活跃的是 `2026/`，以后想做对比再开 `2025/`、`2024/` 等历史归档。
 
 ---
 
@@ -49,13 +52,13 @@ cp .env.example .env
 # 编辑 .env，填入 getnote API 凭证
 
 # 3. 拉原始数据（受 API 限流，慢慢跑）
-python scripts/fetch.py --year 2025
+python scripts/fetch.py --year 2026
 
 # 4. 归一化（一次性）
-python scripts/normalize.py --year 2025
+python scripts/normalize.py --year 2026
 
 # 5. 跑分析（按需）
-python scripts/analyze.py --year 2025
+python scripts/analyze.py --year 2026
 ```
 
 ---
@@ -66,20 +69,20 @@ python scripts/analyze.py --year 2025
 waic-getnote-open-debrief/
 ├── data/                  ← 第一大块：原始数据
 │   ├── README.md
-│   └── 2025/
-│       └── 2025-07-XX__<被访者>.md
+│   └── 2026/
+│       └── 2026-07-XX__<被访者>.md
 ├── processed/             ← 第二大块：整理后数据
 │   ├── README.md
-│   └── 2025/
+│   └── 2026/
 │       ├── notes.csv
 │       ├── companies.csv
 │       └── topics.json
 ├── outputs/               ← 第三大块：我的产出
 │   ├── README.md
-│   └── 2025/
+│   └── 2026/
 │       ├── charts/
 │       ├── reports/
-│       └── compare/       # 跨年对比
+│       └── compare/       # 跨年对比（等需要时再启用）
 ├── scripts/
 │   ├── fetch.py           ← 拉数据（含限流 + 断点）
 │   ├── normalize.py       ← 归一化
