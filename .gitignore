@@ -1,0 +1,57 @@
+# ============ Environment / Secrets ============
+.env
+.env.local
+*.pem
+*.key
+config.local.yaml
+
+# ============ Raw / Large Data (pull on demand) ============
+data/raw/*
+!data/raw/.gitkeep
+data/raw/.gitkeep
+
+data/interim/*
+!data/interim/.gitkeep
+data/interim/.gitkeep
+
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+
+# ============ Jupyter ============
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============ IDE ============
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ============ OS ============
+Thumbs.db
+desktop.ini
+
+# ============ Logs / Cache ============
+*.log
+logs/
+.cache/
+
+# ============ Build artifacts ============
+dist/
+build/
+*.whl
+*.tar.gz
