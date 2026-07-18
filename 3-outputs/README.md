@@ -1,14 +1,14 @@
-# outputs/ · 第三大块：我的产出
+# 3-outputs/ · 第三大块：我的产出
 
 > 图表、报告、跨年对比 —— 这是仓库里**真正对外的部分**。
-> 前两大块（data / processed）是原料，本块是成品。
+> 前两大块（1-data / 2-processing）是原料，本块是成品。
 
 ---
 
 ## 结构
 
 ```
-outputs/
+3-outputs/
 └── 2026/                  ← 当前活跃年度
     ├── charts/            ← 图（PNG / SVG / HTML）
     ├── reports/           ← 报告（MD / PDF / Notebook）
@@ -21,7 +21,7 @@ outputs/
 | `reports/` | 完整分析报告 | `2026-waic-recap.md` |
 | `compare/` | 跨议题对比 | `cross_industry_topics.md` |
 
-> 历史年度（`outputs/2024/`、`outputs/2025/`）等以后需要做跨年对比时再启用。
+> 历史年度（`3-outputs/2024/`、`3-outputs/2025/`）等以后需要做跨年对比时再启用。
 
 ---
 

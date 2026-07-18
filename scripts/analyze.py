@@ -1,8 +1,8 @@
-"""Example analyzers operating on processed/<year>/notes.csv.
+"""Example analyzers operating on 2-processing/<year>/notes.csv.
 
 Currently supports:
-- --kind companies   → processed/<year>/companies.csv (mention frequency)
-- --kind yearly      → outputs/<year>/reports/yearly_summary.json (high-level stats)
+- --kind companies   → 2-processing/<year>/companies.csv (mention frequency)
+- --kind yearly      → 3-outputs/<year>/reports/yearly_summary.json (high-level stats)
 
 Usage:
     python scripts/analyze.py --year 2025 --kind companies
@@ -30,7 +30,7 @@ log = logging.getLogger("analyze")
 
 
 def _read_notes_csv(year: int) -> list[dict]:
-    csv_path = settings.repo_root / "processed" / str(year) / "notes.csv"
+    csv_path = settings.repo_root / "2-processing" / str(year) / "notes.csv"
     if not csv_path.exists():
         log.error("missing %s — run scripts/normalize.py first", csv_path)
         return []
@@ -56,7 +56,7 @@ def kind_companies(year: int) -> int:
             for c in company_note_count:
                 company_mentions[c] += text.count(c)
 
-    out_dir = settings.repo_root / "processed" / str(year)
+    out_dir = settings.repo_root / "2-processing" / str(year)
     out_dir.mkdir(parents=True, exist_ok=True)
     out_csv = out_dir / "companies.csv"
     with out_csv.open("w", encoding="utf-8", newline="") as fh:
@@ -70,7 +70,7 @@ def kind_companies(year: int) -> int:
 
 def kind_yearly(year: int) -> int:
     rows = _read_notes_csv(year)
-    out_dir = settings.repo_root / "outputs" / str(year) / "reports"
+    out_dir = settings.repo_root / "3-outputs" / str(year) / "reports"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     total = len(rows)
@@ -103,7 +103,7 @@ def kind_yearly(year: int) -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run an analyzer on processed/<year>/notes.csv")
+    parser = argparse.ArgumentParser(description="Run an analyzer on 2-processing/<year>/notes.csv")
     parser.add_argument("--year", type=int, required=True)
     parser.add_argument(
         "--kind",

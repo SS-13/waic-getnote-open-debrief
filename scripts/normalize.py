@@ -1,4 +1,4 @@
-"""Normalize raw notes in data/<year>/ into processed/<year>/notes.csv.
+"""Normalize raw notes in 1-data/<year>/ into 2-processing/<year>/notes.csv.
 
 Single-file design. Reads .md files written by scripts/fetch.py, extracts
 frontmatter + transcript, writes a flat CSV.
@@ -65,12 +65,12 @@ def parse_note(md_path: Path) -> dict | None:
 
 
 def run(year: int) -> int:
-    src_dir = settings.repo_root / "data" / str(year)
+    src_dir = settings.repo_root / "1-data" / str(year)
     if not src_dir.exists():
         log.error("source dir not found: %s", src_dir)
         return 0
 
-    out_dir = settings.repo_root / "processed" / str(year)
+    out_dir = settings.repo_root / "2-processing" / str(year)
     out_dir.mkdir(parents=True, exist_ok=True)
     out_csv = out_dir / "notes.csv"
 
@@ -101,7 +101,7 @@ def run(year: int) -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Normalize data/<year>/*.md → processed/<year>/notes.csv")
+    parser = argparse.ArgumentParser(description="Normalize 1-data/<year>/*.md → 2-processing/<year>/notes.csv")
     parser.add_argument("--year", type=int, required=True)
     args = parser.parse_args()
     return run(args.year)

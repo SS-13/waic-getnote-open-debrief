@@ -4,7 +4,7 @@ Single-file design:
 - Token-bucket rate limiter (RPS + daily quota)
 - Persistent checkpoint for resume
 - Dry-run mode when no API key is set
-- Saves raw notes to data/<year>/<date>__<interviewee>.md
+- Saves raw notes to 1-data/<year>/<date>__<interviewee>.md
 
 Usage:
     python scripts/fetch.py --year 2025
@@ -214,7 +214,7 @@ def save_note(year: int, note: dict) -> Path:
     date_part = note.get("date") or "unknown-date"
     name_part = (note.get("company") or note.get("interviewee") or note["note_id"]).strip()
     safe = "".join(c if c.isalnum() or c in "-_" else "_" for c in name_part)
-    target = settings.repo_root / "data" / str(year) / f"{date_part}__{safe}.md"
+    target = settings.repo_root / "1-data" / str(year) / f"{date_part}__{safe}.md"
     target.parent.mkdir(parents=True, exist_ok=True)
 
     body = f"""# {note.get('title', '(no title)')}
@@ -240,7 +240,7 @@ def save_note(year: int, note: dict) -> Path:
 # ---------- main ----------
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Fetch WAIC notes into data/<year>/")
+    parser = argparse.ArgumentParser(description="Fetch WAIC notes into 1-data/<year>/")
     parser.add_argument("--year", type=int, required=True, help="e.g. 2025")
     parser.add_argument("--since", required=True, help="ISO date, e.g. 2025-07-01")
     parser.add_argument("--until", required=True, help="ISO date, e.g. 2025-07-31")

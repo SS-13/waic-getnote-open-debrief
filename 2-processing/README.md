@@ -1,13 +1,13 @@
-# processed/ · 第二大块：整理后数据
+# 2-processing/ · 第二大块：整理后数据
 
-> 把 `data/<year>/` 里的原始笔记归一化成稳定的 schema，让下游分析脚本不用关心原始格式差异。
+> 把 `1-data/<year>/` 里的原始笔记归一化成稳定的 schema，让下游分析脚本不用关心原始格式差异。
 
 ---
 
 ## 结构
 
 ```
-processed/
+2-processing/
 └── 2026/                  ← 当前活跃年度
     ├── notes.csv          ← 全部 note 一行一条
     ├── companies.csv      ← 公司维度聚合
@@ -31,7 +31,7 @@ processed/
 | `duration_sec` | int | 音频时长 |
 | `transcript_len` | int | 文字稿字数 |
 | `tags` | str | 用 `\|` 分隔 |
-| `source_path` | str | 对应 `data/<year>/` 下的源文件路径 |
+| `source_path` | str | 对应 `1-data/<year>/` 下的源文件路径 |
 
 ### `companies.csv`
 
