@@ -6,9 +6,6 @@
 config.local.yaml
 
 # ============ Raw / Large Data (pull on demand) ============
-data/raw/*
-!data/raw/.gitkeep
-data/raw/.gitkeep
 
 data/interim/*
 !data/interim/.gitkeep

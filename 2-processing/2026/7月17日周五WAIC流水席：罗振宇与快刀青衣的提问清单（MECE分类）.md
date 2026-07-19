@@ -1,6 +1,6 @@
 ---
 title: "罗振宇与快刀青衣的提问清单（MECE分类）"
-author: "页均"
+author: "Joe"
 date: "2026-07-17"
 ---
 

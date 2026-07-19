@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{{ title }}</title>
+{# Jinja2 template — rendered by scripts/render_reports.py #}
+<style>
+  /* ====== 颜色与字体（复刻原 PNG） ====== */
+  :root {
+    --teal:        #1FB8C5;   /* 主强调色：青色 */
+    --lime:        #B8D630;   /* 点缀色：黄绿 */
+    --ink:         #2C3E50;   /* 标题深蓝灰 */
+    --paper:       #F4F2EC;   /* 浅米白背景 */
+    --paper-line:  #D9D6CC;   /* 方格线 */
+    --soft-cyan:   rgba(31, 184, 197, 0.10);
+    --label-grey:  #888888;
+    --body-grey:   #3a3a3a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper);
+    color: var(--body-grey);
+    font-family: "PingFang SC", "Heiti SC", "Hiragino Sans GB", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 外层 = 流式布局，宽度 1080，正文长时自动加高 */
+  .page {
+    width: 1080px;
+    min-height: 1440px;
+    height: auto;
+    padding-bottom: 60px;
+    background: var(--paper);
+  }
+
+  /* ====== 方格纸背景 ====== */
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right,  var(--paper-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--paper-line) 1px, transparent 1px);
+    background-size: 36px 36px;
+    opacity: 0.55;
+  }
+
+  /* ====== 顶部双色条（左青→右黄绿） ====== */
+  .topbar {
+    height: 14px;
+    background: linear-gradient(to right, var(--teal) 0%, var(--teal) 70%, var(--lime) 70%, var(--lime) 100%);
+    margin-bottom: 32px;
+  }
+
+  /* ====== 顶部 header 区 ====== */
+  .header {
+    padding: 0 70px;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 28px;
+    min-height: 38px;
+  }
+  .header .brand {
+    font-weight: 700; font-size: 22px;
+    color: var(--ink); letter-spacing: 0.5px;
+  }
+  .header .index {
+    font-family: "PingFang SC", sans-serif;
+    font-size: 16px;
+    color: var(--label-grey);
+    letter-spacing: 2px;
+  }
+
+  /* ====== 主标题（衬线/宋体感） ====== */
+  .title {
+    padding: 0 70px;
+    font-family: "Songti SC", "Songti TC", "STSong", serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.25;
+    color: var(--ink);
+    max-height: 120px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 16px;
+  }
+
+  /* ====== 提问人（带左侧短色块） ====== */
+  .asker {
+    padding: 0 70px;
+    display: flex; align-items: center;
+    font-size: 22px;
+    color: var(--body-grey);
+    margin-bottom: 18px;
+  }
+  .asker::before {
+    content: "";
+    display: inline-block;
+    width: 8px; height: 24px;
+    margin-right: 14px;
+    background: var(--lime);
+  }
+
+  /* ====== 提问框（浅青底圆角 + 左侧粗青竖线） ====== */
+  .questions {
+    margin: 0 70px 30px 70px;
+    background: var(--soft-cyan);
+    border-left: 8px solid var(--teal);
+    border-radius: 6px;
+    padding: 26px 36px 28px 32px;
+  }
+  .questions .label {
+    font-size: 18px;
+    color: var(--teal);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+  }
+  .questions ol {
+    margin: 0; padding-left: 0;
+    list-style: none;
+    counter-reset: q;
+  }
+  .questions li {
+    counter-increment: q;
+    font-size: 22px;
+    line-height: 1.55;
+    padding: 6px 0 6px 56px;
+    position: relative;
+    color: var(--ink);
+  }
+  .questions li::before {
+    content: counter(q, decimal-leading-zero);
+    position: absolute;
+    left: 0; top: 6px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 26px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ====== 回答区 ====== */
+  .answer {
+    padding: 0 70px;
+    margin-top: 10px;
+  }
+  .answer .label {
+    font-size: 18px;
+    color: var(--teal);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+  .answer .body {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--body-grey);
+    text-align: justify;
+  }
+
+  /* ====== 页脚 ====== */
+  .footer {
+    margin-top: 40px;
+    padding: 0 70px 30px 70px;
+    text-align: right;
+    font-size: 16px;
+    color: var(--label-grey);
+    letter-spacing: 3px;
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="grid"></div>
+    <div class="topbar"></div>
+    <div class="header">
+      <div class="brand">WAIC 下午流水席</div>
+      <div class="index">INTERVIEW / {{ index }}</div>
+    </div>
+    <div class="title">{{ title }}</div>
+    <div class="asker">提问人　{{ asker }}</div>
+    <div class="questions">
+      <div class="label">QUETSIONS / 提问</div>
+      <ol>
+        {% for item in questions -%}
+          <li>{{ item.q if item.q is string else item.q }}</li>
+        {% endfor -%}
+      </ol>
+    </div>
+    <div class="answer">
+      <div class="label">ANSWER / 回答摘要</div>
+      <div class="body">{{ answer }}</div>
+    </div>
+    <div class="footer">TECH INTERVIEW NOTES</div>
+  </div>
+</body>
+</html>

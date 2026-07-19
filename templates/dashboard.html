@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{{ day }} · 流水席落地看板</title>
+<style>
+  :root {
+    --bg: #F8F6F0;
+    --paper: #FFFFFF;
+    --ink: #1F2937;
+    --grey: #6B7280;
+    --line: #E5E7EB;
+    --blue: #2563EB;
+    --green: #059669;
+    --pink: #EC4899;
+    --orange: #F59E0B;
+    --blue-soft: rgba(37, 99, 235, 0.10);
+    --green-soft: rgba(5, 150, 105, 0.10);
+    --pink-soft: rgba(236, 72, 153, 0.10);
+    --orange-soft: rgba(245, 158, 11, 0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Heiti SC", "Hiragino Sans GB", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    width: 1920px;
+    min-height: 1200px;
+    padding: 50px 70px;
+    background: var(--bg);
+  }
+  /* ====== 顶部标题区 ====== */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .topbar-left .breadcrumb {
+    font-size: 14px; color: var(--grey); letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  .topbar-left h1 {
+    font-size: 40px; font-weight: 800; line-height: 1.2;
+    color: var(--ink);
+  }
+  .topbar-left h1 .hl { color: var(--blue); }
+  .topbar-left .sub {
+    font-size: 16px; color: var(--grey);
+    margin-top: 8px; line-height: 1.6;
+  }
+  .topbar-right {
+    display: flex; gap: 28px;
+    border-left: 1px solid var(--line);
+    padding-left: 28px;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat .num {
+    font-size: 36px; font-weight: 800; color: var(--blue);
+    line-height: 1.1;
+  }
+  .stat .lab {
+    font-size: 12px; color: var(--grey);
+    margin-top: 4px; letter-spacing: 1px;
+  }
+  /* ====== 4 列卡片 ====== */
+  .cards {
+    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
+    margin: 24px 0;
+  }
+  .card {
+    background: var(--paper);
+    border-radius: 6px;
+    padding: 18px 22px;
+    border-left: 4px solid var(--c);
+  }
+  .card.c1 { --c: var(--blue); }
+  .card.c2 { --c: var(--green); }
+  .card.c3 { --c: var(--pink); }
+  .card.c4 { --c: var(--orange); }
+  .card .head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 8px;
+  }
+  .card .num {
+    width: 26px; height: 26px; border-radius: 50%;
+    border: 2px solid var(--c); color: var(--c);
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card .title {
+    font-size: 18px; font-weight: 700; color: var(--ink);
+  }
+  .card .sub {
+    font-size: 13px; color: var(--grey);
+    margin-bottom: 12px;
+  }
+  .card .quote {
+    font-size: 13px; color: var(--ink);
+    line-height: 1.7; margin-bottom: 10px;
+  }
+  .card .quote::before {
+    content: "› "; color: var(--c); font-weight: 700;
+  }
+  .card .answer {
+    font-size: 12px; color: var(--c);
+    background: var(--c-soft);
+    padding: 8px 12px; border-radius: 4px;
+    line-height: 1.6;
+  }
+  .card.c1 .answer { --c-soft: var(--blue-soft); }
+  .card.c2 .answer { --c-soft: var(--green-soft); }
+  .card.c3 .answer { --c-soft: var(--pink-soft); }
+  .card.c4 .answer { --c-soft: var(--orange-soft); }
+  .card .answer::before {
+    content: "得到的是："; font-weight: 700;
+  }
+  /* ====== 主表格 ====== */
+  .matrix {
+    background: var(--paper);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 24px;
+  }
+  .matrix table {
+    width: 100%; border-collapse: collapse;
+    font-size: 13px;
+  }
+  .matrix thead {
+    background: #FAFAFA;
+  }
+  .matrix th, .matrix td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+  .matrix th {
+    font-weight: 700; color: var(--ink);
+    font-size: 13px;
+  }
+  .matrix th .dot {
+    display: inline-block; width: 8px; height: 8px;
+    border-radius: 50%; margin-right: 6px;
+    vertical-align: middle;
+  }
+  .matrix th.c1 .dot { background: var(--blue); }
+  .matrix th.c2 .dot { background: var(--green); }
+  .matrix th.c3 .dot { background: var(--pink); }
+  .matrix th.c4 .dot { background: var(--orange); }
+  .matrix .num-col { width: 50px; color: var(--grey); }
+  .matrix .name-col { width: 220px; }
+  .matrix .name .company { font-weight: 700; color: var(--ink); }
+  .matrix .name .desc { color: var(--grey); font-size: 12px; margin-top: 2px; }
+  .matrix td.c1 { background: var(--blue-soft); }
+  .matrix td.c2 { background: var(--green-soft); }
+  .matrix td.c3 { background: var(--pink-soft); }
+  .matrix td.c4 { background: var(--orange-soft); }
+  .matrix td.has-content {
+    color: var(--ink); font-weight: 600;
+  }
+  .matrix td.empty {
+    background: transparent !important;
+    color: transparent;
+  }
+  /* ====== 底部结论 ====== */
+  .conclusion {
+    margin-top: 28px;
+    display: flex; align-items: stretch;
+    background: var(--paper);
+    border-radius: 6px;
+    padding: 20px 24px;
+    gap: 24px;
+  }
+  .conclusion .lead {
+    flex: 0 0 280px;
+    font-size: 22px; font-weight: 800;
+    color: var(--ink);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .conclusion .lead .arrow { color: var(--blue); font-size: 28px; }
+  .conclusion .items {
+    flex: 1; display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
+  }
+  .conclusion .item {
+    border-left: 3px solid var(--c);
+    padding-left: 12px;
+    font-size: 12px; line-height: 1.7;
+    color: var(--grey);
+  }
+  .conclusion .item .t { font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .conclusion .item.c1 { --c: var(--blue); }
+  .conclusion .item.c2 { --c: var(--green); }
+  .conclusion .item.c3 { --c: var(--pink); }
+  .conclusion .item.c4 { --c: var(--orange); }
+  .footer-note {
+    margin-top: 16px;
+    font-size: 12px; color: var(--grey);
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="breadcrumb">WAIC 2026 · 下午流水席 · {{ interview_count }} 场访谈</div>
+      <h1>罗振宇 &amp; 快刀青衣用 <span class="hl">4 个问题方向</span>，找 AI 时代的机会</h1>
+      <div class="sub">{{ sub }}</div>
+    </div>
+    <div class="topbar-right">
+      <div class="stat"><div class="num">{{ interview_count }}</div><div class="lab">场访谈</div></div>
+      <div class="stat"><div class="num">4</div><div class="lab">个方向</div></div>
+      <div class="stat"><div class="num">{{ new_count }}</div><div class="lab">个新问题</div></div>
+      <div class="stat"><div class="num">0</div><div class="lab">个不靠谱</div></div>
+    </div>
+  </div>
+
+  <div class="cards">
+    {% for d in directions %}
+    <div class="card c{{ loop.index }}">
+      <div class="head">
+        <div class="num">{{ loop.index }}</div>
+        <div class="title">{{ d.title }}</div>
+      </div>
+      <div class="sub">{{ d.sub }}</div>
+      {% for q in d.quotes %}
+      <div class="quote">{{ q }}</div>
+      {% endfor %}
+      <div class="answer">{{ d.answer }}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="matrix">
+    <table>
+      <thead>
+        <tr>
+          <th class="num-col">#</th>
+          <th class="name-col">访谈</th>
+          <th class="c1"><span class="dot"></span>1 技术路线</th>
+          <th class="c2"><span class="dot"></span>2 落地场景</th>
+          <th class="c3"><span class="dot"></span>3 时间表</th>
+          <th class="c4"><span class="dot"></span>4 成本可及性</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td class="num-col">{{ "%02d" | format(loop.index) }}</td>
+          <td class="name">
+            <div class="company">{{ row.company }}</div>
+            <div class="desc">{{ row.desc }}</div>
+          </td>
+          <td class="c1 {% if row.c1 %}has-content{% else %}empty{% endif %}">{{ row.c1 }}</td>
+          <td class="c2 {% if row.c2 %}has-content{% else %}empty{% endif %}">{{ row.c2 }}</td>
+          <td class="c3 {% if row.c3 %}has-content{% else %}empty{% endif %}">{{ row.c3 }}</td>
+          <td class="c4 {% if row.c4 %}has-content{% else %}empty{% endif %}">{{ row.c4 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="conclusion">
+    <div class="lead"><span class="arrow">→</span>AI 时代的机会在哪里？</div>
+    <div class="items">
+      {% for d in directions %}
+      <div class="item c{{ loop.index }}">
+        <div class="t">{{ d.title }}</div>
+        {{ d.takeaway }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="footer-note">
+    数据来源：7月18日 WAIC 下午流水席访谈 · {{ interview_count }} 场访谈 · 基于 2-processing/2026/0718/ 完整文字稿整理
+  </div>
+</div>
+</body>
+</html>
