@@ -27,10 +27,10 @@
 
 每个人有自己分析问题的角度。你可以：
 
-1. **读 `2-processing/`** 里的对话录 + MECE 分类
+1. **读 `3-processing/`** 里的对话录 + MECE 分类
 2. **自己用 AI**（ChatGPT / Claude / Gemini / Kimi ...）针对某场访谈追问、对比、质疑
 3. **写你自己的解读**——笔记、文章、二创、PPT
-4. **看 `3-outputs/`** 里的卡片图、看板、问题清单当快速浏览入口
+4. **看 `4-outputs/`** 里的卡片图、看板、问题清单当快速浏览入口
 
 > **我的解读不是标准答案。** 仓库提供的是**结构化的原料**，你做出来的东西才是成品。
 
@@ -75,14 +75,29 @@ WAIC 是中国 AI 行业一年一度的风向标——这种规模的现场访�
 
 ```
 仓库/
-├── 1-data/         # 原始数据（getnote CLI 拉的逐字稿）
-├── 2-processing/    # 加工数据（按 MECE 分类的对话录 + 问题清单）
-├── 3-outputs/       # 产出（卡片图、看板、PDF 合集）
+├── 1-raw/         # 原始数据（getnote CLI 拉的逐字稿 + 智能总结）
+├── 2-data/        # 手工整理信息（完整逐字稿 / 人工分组）
+├── 3-processing/    # 加工数据（按 MECE 分类的对话录 + 问题清单）
+├── 4-outputs/       # 产出（卡片图、看板、PDF 合集）
 ├── agents.md        # 给 AI agent 看的结构说明
 ├── LICENSE          # MIT
 └── README.md        # 本文件
 ```
 
 > 📦 `scripts/`（复现工具）和 `templates/`（HTML 模板）在仓库里但**不主动展示**——它们是 Joe 自己复现用的，不是给你用的。
+
+## 🔄 每日增量拉取（自动同步 KB → 1-raw）
+
+KB 在持续更新。每天跑一次同步脚本,只拉**新增**的笔记,绝不重复:
+
+```bash
+python scripts/daily_sync.py            # 实拉
+python scripts/daily_sync.py --dry-run  # 只看差集
+```
+
+- **去重** = `note_id`（`1-raw` 每篇 frontmatter 都有）
+- **每日 09:07 定时**：`7 9 * * * cd <repo> && python scripts/daily_sync.py >> .sync.log 2>&1`
+- 脚本自动分类（2026 当届/往年届次/专题研究）、写 frontmatter、重建 `1-raw/INDEX.md`
+- 无新增时为 no-op,放心挂 cron
 
 详细说明见 [`agents.md`](./agents.md)。
