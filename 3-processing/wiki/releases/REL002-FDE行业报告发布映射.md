@@ -14,6 +14,7 @@ as_of: 2026-07-22
 | 交付物 | 路径 | 知识来源 |
 |---|---|---|
 | 完整行业报告 | [Markdown](../../../4-outputs/2026/reports/fde-industry-report-2026/FDE-2026-中美企业AI部署与治理行业报告.md) | SYN003、C010-C014、T003、K005 |
+| 专业图文版 | [PDF](../../../4-outputs/2026/reports/fde-industry-report-2026/FDE-2026-中美企业AI部署与治理行业报告.pdf) | 完整报告的固定版式发布 |
 | 交付说明 | [README](../../../4-outputs/2026/reports/fde-industry-report-2026/README.md) | 范围、版本、证据边界与阅读路径 |
 
 ## 发布门禁

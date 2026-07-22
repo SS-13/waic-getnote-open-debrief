@@ -3,6 +3,7 @@
 ## 推荐阅读
 
 - [完整报告](FDE-2026-中美企业AI部署与治理行业报告.md)
+- [PDF 图文版](FDE-2026-中美企业AI部署与治理行业报告.pdf)
 - [对应 Wiki 综合 SYN003](../../../../3-processing/wiki/syntheses/SYN003-FDE中美企业AI部署与治理产业研判.md)
 - [发布映射 REL002](../../../../3-processing/wiki/releases/REL002-FDE行业报告发布映射.md)
 
