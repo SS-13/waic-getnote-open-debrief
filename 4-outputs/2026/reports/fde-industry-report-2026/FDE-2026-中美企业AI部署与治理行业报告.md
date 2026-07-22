@@ -1,5 +1,6 @@
 ---
 title: FDE 2026 中美企业 AI 部署与治理行业报告
+author: Joe
 as_of: 2026-07-22
 status: publishable
 wiki_synthesis: SYN003

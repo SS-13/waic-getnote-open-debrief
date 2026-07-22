@@ -23,4 +23,6 @@
 
 所有对外解读都应保留材料边界：展会展示、签约、厂商自报和试点，不等同于社会普及或独立验证的效果。
 
+新建正式报告统一署名 **研究与整理：Joe**。Markdown 使用 `author: Joe`，PDF 与 PPT 在封面或首屏显示该署名。
+
 正式产出还应在 `3-processing/wiki/releases/` 建立发布映射。当前推荐研究见 [REL001](../3-processing/wiki/releases/REL001-WAIC战略研究报告发布映射.md)。
