@@ -1,0 +1,35 @@
+{
+  "requestContract": "joseph-system-registration-request/v1",
+  "requestedAt": "2026-07-22T11:49:00+08:00",
+  "registeredAt": "2026-07-22T12:07:59+08:00",
+  "statusPublishedAt": "2026-07-22T12:21:26+08:00",
+  "requestStatus": "registered",
+  "system": {
+    "id": "waic-research",
+    "name": "WAIC AI 战略研究",
+    "kind": "research",
+    "parent": "knowledge-core",
+    "owner": "waic-research",
+    "dashboardOrder": 70,
+    "root": "10_domains/WAIC-AI战略研究",
+    "entryPath": "10_domains/WAIC-AI战略研究/README.md",
+    "statusPath": "10_domains/WAIC-AI战略研究/SYSTEM_STATUS.md",
+    "requestedCheckTime": "23:38",
+    "statusAutomationId": "waic"
+  },
+  "sourceSystem": {
+    "root": "/Users/macos/Workspaces/AI/waic-getnote-open-debrief",
+    "entryPath": "3-processing/wiki/HOME.md",
+    "releasePath": "3-processing/wiki/releases/REL001-WAIC战略研究报告发布映射.md",
+    "lintEvidencePath": "3-processing/index/governance-lint-report.json"
+  },
+  "registrationBlocker": null,
+  "completedMainSystemActions": [
+    "Registered waic-research in 99_知识库治理/system-registry.json",
+    "Added waic-research to 99_知识库治理/系统注册表.md",
+    "Created the Vault-local mapped entry and REL001 pointer",
+    "Created the waic nightly status automation",
+    "Updated the main morning audit to read all registered systems",
+    "Published and validated the first waic-research SYSTEM_STATUS.md"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-07-22T07:52:22.293Z",
+  "passed": true,
+  "checks": {
+    "registryRecords": 860,
+    "uniqueSourceIds": 860,
+    "duplicateCanonicalSourceIds": 13,
+    "wikiPages": 24,
+    "wikiIds": 22,
+    "checkedLinks": 113
+  },
+  "errors": [],
+  "warnings": []
+}

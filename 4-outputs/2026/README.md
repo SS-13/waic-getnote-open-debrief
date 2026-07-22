@@ -1,27 +1,24 @@
-# 3-outputs/2026 · WAIC 2026 产出（当前进行中）
+# WAIC 2026 输出索引
 
-> **今年是 2026-07-19，WAIC 2026 是当前活跃的年度。**
-> 本期所有图表 / 报告 / 对比都在这里。
+本目录汇总 2026 年 WAIC 相关的可阅读、可展示产物；按交付用途而非生成时间组织。
 
----
+## 从这里进入
 
-## 状态
+| 需要什么 | 位置 | 说明 |
+| --- | --- | --- |
+| 深度战略研究（推荐） | [reports/waic-strategic-research-2018-2026/](reports/waic-strategic-research-2018-2026/README.md) | 全库样本、外部岗位数据、国内外政策、MD/PDF/PPT。 |
+| 独立研究图表 | [figures/waic-strategic-research-2018-2026/](figures/waic-strategic-research-2018-2026/README.md) | 8 张 1600×900 可复用 figures。 |
+| 第一版跨年报告 | [reports/waic-2018-2026/](reports/waic-2018-2026/README.md) | 保留的早期 12 页版本。 |
+| 7 月 17 日单场卡片 | [reports/0717/](reports/0717/) | 18 张正式卡片图。 |
+| 7 月 18 日单场卡片 | [reports/0718/](reports/0718/) | 19 张正式卡片图。 |
+| 看板与长图 | [figures/](figures/) | 看板、问题清单与卡片图集 PDF。 |
 
-- [ ] `1-data/2026/` 数据接入（慢慢拉，受 API 限流）
-- [ ] `2-processing/2026/` 归一化
-- [ ] `charts/` 第一张图
-- [ ] `reports/` WAIC 2026 速览
-- [ ] `compare/` 跨年对比（等数据沉淀）
+推荐研究已登记到 Wiki [REL001 发布映射](../../3-processing/wiki/releases/REL001-WAIC战略研究报告发布映射.md)，用于追踪报告、PPT、PDF、figures 与知识对象之间的关系。
 
----
+## 内容分层
 
-## 索引
+- `reports/`：可独立阅读或汇报的主题报告与卡片。
+- `figures/`：将既有研究压缩为便于浏览、分享或投屏的图像和合集。
+- `reports/0717_old/` 与 `reports/0718_old/`：保留的历史卡片版本。它们不是当前默认引用版本。
 
-### charts/
-（暂无）
-
-### reports/
-（暂无）
-
-### compare/
-（暂无，跨年对比等以后需要时再启用）
+本目录保留了早期方案 `reports/WAIC-2018-2026-普通人视角与知识库治理.pptx`，以便回溯；本次跨年报告不包含知识库使用方法，请从主题目录进入。

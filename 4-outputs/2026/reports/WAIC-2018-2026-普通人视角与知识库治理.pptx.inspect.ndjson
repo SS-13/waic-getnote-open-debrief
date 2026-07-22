@@ -1,0 +1,337 @@
+{"kind":"deck","id":"pr/78ufev","name":"Deck"}
+{"kind":"layout","layoutId":"67379714-6ca9-45a8-b865-cf9894c41470","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"e30572ce-6eed-49bb-9302-ff48075a7832","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/14in59","slide":1,"title":"WAIC 2018–2026","textShapes":5}
+{"kind":"shape","id":"sh/md0bit4r","slide":1,"bbox":[0,0,1280,14]}
+{"kind":"shape","id":"sh/9gbadon2","slide":1,"bbox":[0,14,665.6,8]}
+{"kind":"shape","id":"sh/8f2tk3mx","slide":1,"bbox":[665.6,14,358.4,8]}
+{"kind":"shape","id":"sh/vitsfy58","slide":1,"bbox":[1024,14,256,8]}
+{"kind":"textbox","id":"sh/uhkbmt4n","slide":1,"text":"WAIC 2018–2026","textPreview":"WAIC 2018–2026","textChars":14,"textLines":1,"bbox":[54,64,460,28]}
+{"kind":"textbox","id":"sh/hkbah8ne","slide":1,"text":"看见变化，\n把看见变成可用的知识","textPreview":"看见变化， | 把看见变成可用的知识","textChars":16,"textLines":2,"bbox":[54,158,1050,220]}
+{"kind":"textbox","id":"sh/wj2to3mt","slide":1,"text":"普通人视角的历史判断 + LLM Wiki 的规模化治理","textPreview":"普通人视角的历史判断 + LLM Wiki 的规模化治理","textChars":28,"textLines":1,"bbox":[54,422,800,42]}
+{"kind":"shape","id":"sh/bm9s3e54","slide":1,"bbox":[54,526,744,0]}
+{"kind":"textbox","id":"sh/algra94j","slide":1,"text":"问题驱动 · 证据可回溯 · 冲突不抹平 · 输出可复用","textPreview":"问题驱动 · 证据可回溯 · 冲突不抹平 · 输出可复用","textChars":28,"textLines":1,"bbox":[54,552,920,34]}
+{"kind":"textbox","id":"sh/writwveh","slide":1,"text":"基于 Q001 首轮 18 份代表性来源与治理 v1.0","textPreview":"基于 Q001 首轮 18 份代表性来源与治理 v1.0","textChars":28,"textLines":1,"bbox":[54,650,700,22]}
+{"kind":"notes","id":"nt/14in59","slide":1,"text":""}
+{"kind":"slide","id":"sl/svopm0","slide":2,"title":"FRAMING","textShapes":12}
+{"kind":"textbox","id":"sh/rad4rml8","slide":2,"text":"FRAMING","textPreview":"FRAMING","textChars":7,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/sbml0rmt","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/twvmtw3e","slide":2,"text":"一个问题，必须同时给出两种答案","textPreview":"一个问题，必须同时给出两种答案","textChars":15,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/ex432h4z","slide":2,"bbox":[54,136,1172,0]}
+{"kind":"textbox","id":"sh/fyd4vmlk","slide":2,"text":"Q001：历年 WAIC 的变化，普通人能看到什么？","textPreview":"Q001：历年 WAIC 的变化，普通人能看到什么？","textChars":26,"textLines":1,"bbox":[54,168,930,34]}
+{"kind":"textbox","id":"sh/gzml4rm5","slide":2,"text":"它既是历史问题，也是治理问题。","textPreview":"它既是历史问题，也是治理问题。","textChars":15,"textLines":1,"bbox":[54,214,830,30]}
+{"kind":"shape","id":"sh/10fmxw3q","slide":2,"bbox":[54,310,548,238]}
+{"kind":"shape","id":"sh/21o3614v","slide":2,"bbox":[678,310,548,238]}
+{"kind":"textbox","id":"sh/n2x4z6lg","slide":2,"text":"历史答案","textPreview":"历史答案","textChars":4,"textLines":1,"bbox":[84,342,270,28]}
+{"kind":"textbox","id":"sh/7mx4baxk","slide":2,"text":"AI 的展示对象、交互方式与落地叙事如何变化？","textPreview":"AI 的展示对象、交互方式与落地叙事如何变化？","textChars":23,"textLines":1,"bbox":[84,390,450,74]}
+{"kind":"textbox","id":"sh/6lon25gz","slide":2,"text":"输出：阶段判断、普通人可观察的信号、反例与未知项","textPreview":"输出：阶段判断、普通人可观察的信号、反例与未知项","textChars":24,"textLines":1,"bbox":[84,490,470,32]}
+{"kind":"textbox","id":"sh/t8zmdkfq","slide":2,"text":"治理答案","textPreview":"治理答案","textChars":4,"textLines":1,"bbox":[708,342,270,28]}
+{"kind":"textbox","id":"sh/87654fy5","slide":2,"text":"怎样让结论能被复查、更新、复用，而不是再堆一批摘要？","textPreview":"怎样让结论能被复查、更新、复用，而不是再堆一批摘要？","textChars":26,"textLines":1,"bbox":[708,390,450,74]}
+{"kind":"textbox","id":"sh/jix47qxo","slide":2,"text":"输出：来源注册、摄取协议、冲突处理、lint 与发布门禁","textPreview":"输出：来源注册、摄取协议、冲突处理、lint 与发布门禁","textChars":28,"textLines":1,"bbox":[708,490,470,32]}
+{"kind":"shape","id":"sh/yho3ylg3","slide":2,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/lkfm90fu","slide":2,"text":"来源：Q001 问题页与 WAIC LLM Wiki Schema v0.1｜2026-07-21","textPreview":"来源：Q001 问题页与 WAIC LLM Wiki Schema v0.1｜2026-07-21","textChars":49,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/svopm0","slide":2,"text":""}
+{"kind":"slide","id":"sl/dv02xa","slide":3,"title":"HISTORICAL READ","textShapes":17}
+{"kind":"textbox","id":"sh/fy94rylg","slide":3,"text":"HISTORICAL READ","textPreview":"HISTORICAL READ","textChars":15,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/0zi5k3m1","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/10rmt83m","slide":3,"text":"九年样本不是一条直线，而是四次交互范式变化","textPreview":"九年样本不是一条直线，而是四次交互范式变化","textChars":21,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/q9g3e94z","slide":3,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/rap4nelk","slide":3,"bbox":[54,198,267,224]}
+{"kind":"shape","id":"sh/sby5gjm5","slide":3,"bbox":[54,198,8,224]}
+{"kind":"textbox","id":"sh/dcrmpo3q","slide":3,"text":"2018–2019","textPreview":"2018–2019","textChars":9,"textLines":1,"bbox":[82,220,221,20]}
+{"kind":"textbox","id":"sh/i5g3a943","slide":3,"text":"技术展品","textPreview":"技术展品","textChars":4,"textLines":1,"bbox":[82,254,221,54]}
+{"kind":"textbox","id":"sh/36p4jelo","slide":3,"text":"看见、试玩、科普：刷脸、推荐、机器人、AI 作画与主持。","textPreview":"看见、试玩、科普：刷脸、推荐、机器人、AI 作画与主持。","textChars":28,"textLines":1,"bbox":[82,326,219,72]}
+{"kind":"shape","id":"sh/va50z2dg","slide":3,"bbox":[344,198,267,224]}
+{"kind":"shape","id":"sh/u9cz6xwb","slide":3,"bbox":[344,198,8,224]}
+{"kind":"textbox","id":"sh/hcni1cvm","slide":3,"text":"2020–2022","textPreview":"2020–2022","textChars":9,"textLines":1,"bbox":[372,220,221,20]}
+{"kind":"textbox","id":"sh/gbeh87e1","slide":3,"text":"数字空间","textPreview":"数字空间","textChars":4,"textLines":1,"bbox":[372,254,221,54]}
+{"kind":"textbox","id":"sh/3y503mds","slide":3,"text":"云端会展、城市服务与沉浸体验；线上触达与元宇宙成为焦点。","textPreview":"云端会展、城市服务与沉浸体验；线上触达与元宇宙成为焦点。","textChars":28,"textLines":1,"bbox":[372,326,219,72]}
+{"kind":"shape","id":"sh/idwzahw7","slide":3,"bbox":[634,198,267,224]}
+{"kind":"shape","id":"sh/50ni5cvy","slide":3,"bbox":[634,198,8,224]}
+{"kind":"textbox","id":"sh/4ze1cred","slide":3,"text":"2023–2024","textPreview":"2023–2024","textChars":9,"textLines":1,"bbox":[662,220,221,20]}
+{"kind":"textbox","id":"sh/j2l0rixo","slide":3,"text":"生成与执行","textPreview":"生成与执行","textChars":5,"textLines":1,"bbox":[662,254,221,54]}
+{"kind":"textbox","id":"sh/yhszydw3","slide":3,"text":"大模型生成内容，无人系统与人形机器人开始进入受限任务场景。","textPreview":"大模型生成内容，无人系统与人形机器人开始进入受限任务场景。","textChars":29,"textLines":1,"bbox":[662,326,219,72]}
+{"kind":"shape","id":"sh/2x036lgb","slide":3,"bbox":[924,198,267,224]}
+{"kind":"shape","id":"sh/ny9kzqxw","slide":3,"bbox":[924,198,8,224]}
+{"kind":"textbox","id":"sh/ozil8vyh","slide":3,"text":"2025–2026","textPreview":"2025–2026","textChars":9,"textLines":1,"bbox":[952,220,221,20]}
+{"kind":"textbox","id":"sh/p0r210f2","slide":3,"text":"任务伙伴","textPreview":"任务伙伴","textChars":4,"textLines":1,"bbox":[952,254,221,54]}
+{"kind":"textbox","id":"sh/et032lgf","slide":3,"text":"智能体、具身系统和消费终端承担规划、交付与服务入口。","textPreview":"智能体、具身系统和消费终端承担规划、交付与服务入口。","textChars":26,"textLines":1,"bbox":[952,326,219,72]}
+{"kind":"textbox","id":"sh/fu9kvqx0","slide":3,"text":"核心不是技术名称更替，而是人和 AI 的关系从“观看”走向“委派”。","textPreview":"核心不是技术名称更替，而是人和 AI 的关系从“观看”走向“委派”。","textChars":34,"textLines":1,"bbox":[54,486,1120,36]}
+{"kind":"shape","id":"sh/0vil4byl","slide":3,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/1wr2xgf6","slide":3,"text":"来源：SYN001《2018–2026 WAIC 变化：普通人视角》；C001–C004｜结论为 provisional","textPreview":"来源：SYN001《2018–2026 WAIC 变化：普通人视角》；C001–C004｜结论为 provisional","textChars":60,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/dv02xa","slide":3,"text":""}
+{"kind":"slide","id":"sl/pgy4k4","slide":4,"title":"HUMAN IMPACT","textShapes":16}
+{"kind":"textbox","id":"sh/jy9g7y1k","slide":4,"text":"HUMAN IMPACT","textPreview":"HUMAN IMPACT","textChars":12,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/4zih0325","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/50ry98jq","slide":4,"text":"普通人真正能看到的，是五个行为变化","textPreview":"普通人真正能看到的，是五个行为变化","textChars":17,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/610z2dkb","slide":4,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/rm90bi1w","slide":4,"bbox":[104,193,10,10]}
+{"kind":"textbox","id":"sh/sn2h43ih","slide":4,"text":"入口变了","textPreview":"入口变了","textChars":4,"textLines":1,"bbox":[128,188,476,24]}
+{"kind":"textbox","id":"sh/tobid8j2","slide":4,"text":"从学习菜单与专业软件，转向直接表达意图。","textPreview":"从学习菜单与专业软件，转向直接表达意图。","textChars":20,"textLines":1,"bbox":[128,216,476,34]}
+{"kind":"shape","id":"sh/m5gzq9k7","slide":4,"bbox":[104,287,10,10]}
+{"kind":"textbox","id":"sh/7qpgze1s","slide":4,"text":"任务变长了","textPreview":"任务变长了","textChars":5,"textLines":1,"bbox":[128,282,476,24]}
+{"kind":"textbox","id":"sh/7yh07m5o","slide":4,"text":"从识别和推荐，走到生成成品、规划路线和多步骤执行。","textPreview":"从识别和推荐，走到生成成品、规划路线和多步骤执行。","textChars":25,"textLines":1,"bbox":[128,310,476,34]}
+{"kind":"shape","id":"sh/6x8zyho3","slide":4,"bbox":[104,381,10,10]}
+{"kind":"textbox","id":"sh/tkzi9cnu","slide":4,"text":"载体变多了","textPreview":"载体变多了","textChars":5,"textLines":1,"bbox":[128,376,476,24]}
+{"kind":"textbox","id":"sh/8zqh0769","slide":4,"text":"AI 从网页和屏幕进入汽车、眼镜、机器人、药房与城市空间。","textPreview":"AI 从网页和屏幕进入汽车、眼镜、机器人、药房与城市空间。","textChars":29,"textLines":1,"bbox":[128,404,476,34]}
+{"kind":"shape","id":"sh/jux0325s","slide":4,"bbox":[680,193,10,10]}
+{"kind":"textbox","id":"sh/ytozuxo7","slide":4,"text":"大会也变了","textPreview":"大会也变了","textChars":5,"textLines":1,"bbox":[704,188,476,24]}
+{"kind":"textbox","id":"sh/lwzi5cni","slide":4,"text":"从展示 AI，走向用 AI 组织展会、连接城市并沉淀内容。","textPreview":"从展示 AI，走向用 AI 组织展会、连接城市并沉淀内容。","textChars":29,"textLines":1,"bbox":[704,216,476,34]}
+{"kind":"shape","id":"sh/kvqhw76d","slide":4,"bbox":[680,287,10,10]}
+{"kind":"textbox","id":"sh/bqx0z2pg","slide":4,"text":"问题变现实了","textPreview":"问题变现实了","textChars":6,"textLines":1,"bbox":[704,282,476,24]}
+{"kind":"textbox","id":"sh/apozqxov","slide":4,"text":"关注点从“酷不酷”变成价格、效率、就业、隐私与责任。","textPreview":"关注点从“酷不酷”变成价格、效率、就业、隐私与责任。","textChars":26,"textLines":1,"bbox":[704,310,476,34]}
+{"kind":"shape","id":"sh/e14j2d83","slide":4,"bbox":[680,386,468,112]}
+{"kind":"textbox","id":"sh/zmd0bi9o","slide":4,"text":"普通人的判断重点","textPreview":"普通人的判断重点","textChars":8,"textLines":1,"bbox":[708,406,380,24]}
+{"kind":"textbox","id":"sh/0nm14nqt","slide":4,"text":"不是“它能不能演示”，而是“它能否稳定替我完成一件事”。","textPreview":"不是“它能不能演示”，而是“它能否稳定替我完成一件事”。","textChars":28,"textLines":1,"bbox":[708,442,394,42]}
+{"kind":"shape","id":"sh/1ofidsre","slide":4,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/mpoj6x8z","slide":4,"text":"来源：SYN001《普通人真正能观察的五个变化》","textPreview":"来源：SYN001《普通人真正能观察的五个变化》","textChars":24,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/pgy4k4","slide":4,"text":""}
+{"kind":"slide","id":"sl/eubobk","slide":5,"title":"COUNTEREXAMPLE","textShapes":17}
+{"kind":"textbox","id":"sh/czq5kjel","slide":5,"text":"COUNTEREXAMPLE","textPreview":"COUNTEREXAMPLE","textChars":14,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/ryh4byx0","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/qx8nitwf","slide":5,"text":"最有价值的发现：热点切换不是成熟度曲线","textPreview":"最有价值的发现：热点切换不是成熟度曲线","textChars":19,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/14jmh8f2","slide":5,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/03a5o3ex","slide":5,"bbox":[130,332,980,0]}
+{"kind":"shape","id":"sh/z214fyxc","slide":5,"bbox":[160,321,22,22]}
+{"kind":"textbox","id":"sh/e1snmtwr","slide":5,"text":"2020","textPreview":"2020","textChars":4,"textLines":1,"bbox":[132,276,110,22]}
+{"kind":"textbox","id":"sh/9sj6l8fe","slide":5,"text":"云端会展","textPreview":"云端会展","textChars":4,"textLines":1,"bbox":[132,368,160,28]}
+{"kind":"textbox","id":"sh/o7a5s3et","slide":5,"text":"疫情推动 AI 进入办会基础设施","textPreview":"疫情推动 AI 进入办会基础设施","textChars":16,"textLines":1,"bbox":[132,410,190,52]}
+{"kind":"shape","id":"sh/yhobm54j","slide":5,"bbox":[402,321,22,22]}
+{"kind":"textbox","id":"sh/zixcval4","slide":5,"text":"2022","textPreview":"2022","textChars":4,"textLines":1,"bbox":[374,276,110,22]}
+{"kind":"textbox","id":"sh/kj6tovmp","slide":5,"text":"元宇宙高热","textPreview":"元宇宙高热","textChars":5,"textLines":1,"bbox":[374,368,160,28]}
+{"kind":"textbox","id":"sh/lkfux03a","slide":5,"text":"沉浸体验与虚拟空间被集中放大","textPreview":"沉浸体验与虚拟空间被集中放大","textChars":14,"textLines":1,"bbox":[374,410,190,52]}
+{"kind":"shape","id":"sh/m5obq54v","slide":5,"bbox":[644,321,22,22]}
+{"kind":"textbox","id":"sh/76hczal0","slide":5,"text":"2023–24","textPreview":"2023–24","textChars":7,"textLines":1,"bbox":[616,276,110,22]}
+{"kind":"textbox","id":"sh/87qdsfml","slide":5,"text":"大模型与具身","textPreview":"大模型与具身","textChars":6,"textLines":1,"bbox":[616,368,160,28]}
+{"kind":"textbox","id":"sh/98zu1k36","slide":5,"text":"生成式交互与物理自动化成为中心","textPreview":"生成式交互与物理自动化成为中心","textChars":15,"textLines":1,"bbox":[616,410,190,52]}
+{"kind":"shape","id":"sh/294bel4b","slide":5,"bbox":[886,321,22,22]}
+{"kind":"textbox","id":"sh/nadcnqlw","slide":5,"text":"2025–26","textPreview":"2025–26","textChars":7,"textLines":1,"bbox":[858,276,110,22]}
+{"kind":"textbox","id":"sh/ru98vm1o","slide":5,"text":"智能体与任务","textPreview":"智能体与任务","textChars":6,"textLines":1,"bbox":[858,368,160,28]}
+{"kind":"textbox","id":"sh/qt0rmhk3","slide":5,"text":"从展示对象走向服务入口与执行者","textPreview":"从展示对象走向服务入口与执行者","textChars":15,"textLines":1,"bbox":[858,410,190,52]}
+{"kind":"shape","id":"sh/dgbqxcju","slide":5,"bbox":[54,526,1172,74]}
+{"kind":"textbox","id":"sh/sf29or29","slide":5,"text":"治理含义：把“大会热词”当作待验证假设，而不是直接写进长期结论。","textPreview":"治理含义：把“大会热词”当作待验证假设，而不是直接写进长期结论。","textChars":32,"textLines":1,"bbox":[82,549,1110,28]}
+{"kind":"shape","id":"sh/3q98r21s","slide":5,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/ip0rixk7","slide":5,"text":"来源：T001《大会可见性与社会采用之间的距离》；2022 元宇宙案例为开放反证","textPreview":"来源：T001《大会可见性与社会采用之间的距离》；2022 元宇宙案例为开放反证","textChars":40,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/eubobk","slide":5,"text":""}
+{"kind":"slide","id":"sl/urxwne","slide":6,"title":"EVIDENCE BOUNDARY","textShapes":17}
+{"kind":"textbox","id":"sh/zqp0j65k","slide":6,"text":"EVIDENCE BOUNDARY","textPreview":"EVIDENCE BOUNDARY","textChars":17,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/kry1cb65","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/ls7ilgna","slide":6,"text":"“看见”到“采用”之间，至少隔着四道证据门","textPreview":"“看见”到“采用”之间，至少隔着四道证据门","textChars":21,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/mtgjelov","slide":6,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/7up0nq5g","slide":6,"bbox":[333,355,40,0]}
+{"kind":"shape","id":"sh/8vy1gv61","slide":6,"bbox":[86,274,247,164]}
+{"kind":"textbox","id":"sh/9wripgnm","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[110,296,40,24]}
+{"kind":"textbox","id":"sh/uh0jilo7","slide":6,"text":"大会展示","textPreview":"大会展示","textChars":4,"textLines":1,"bbox":[110,336,203,30]}
+{"kind":"textbox","id":"sh/vi90rq5s","slide":6,"text":"看得见、可试玩","textPreview":"看得见、可试玩","textChars":7,"textLines":1,"bbox":[110,382,203,34]}
+{"kind":"shape","id":"sh/repsvml4","slide":6,"bbox":[618,355,40,0]}
+{"kind":"shape","id":"sh/6dgrmh4j","slide":6,"bbox":[371,274,247,164]}
+{"kind":"textbox","id":"sh/tg7axw3u","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[395,296,40,24]}
+{"kind":"textbox","id":"sh/sfy9orm9","slide":6,"text":"厂商主张","textPreview":"厂商主张","textChars":4,"textLines":1,"bbox":[395,336,203,30]}
+{"kind":"textbox","id":"sh/japsr2ls","slide":6,"text":"发布、参数、签约","textPreview":"发布、参数、签约","textChars":8,"textLines":1,"bbox":[395,382,203,34]}
+{"kind":"shape","id":"sh/i9wrix47","slide":6,"bbox":[903,355,40,0]}
+{"kind":"shape","id":"sh/5c7atc3y","slide":6,"bbox":[656,274,247,164]}
+{"kind":"textbox","id":"sh/4by9k7md","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[680,296,40,24]}
+{"kind":"textbox","id":"sh/369s36lw","slide":6,"text":"局部运营","textPreview":"局部运营","textChars":4,"textLines":1,"bbox":[680,336,203,30]}
+{"kind":"textbox","id":"sh/250bu14r","slide":6,"text":"订单、门店、交付","textPreview":"订单、门店、交付","textChars":8,"textLines":1,"bbox":[680,382,203,34]}
+{"kind":"shape","id":"sh/y14vm5oz","slide":6,"bbox":[941,274,247,164]}
+{"kind":"textbox","id":"sh/z2dcva54","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[965,296,40,24]}
+{"kind":"textbox","id":"sh/03mdof6p","slide":6,"text":"社会采用","textPreview":"社会采用","textChars":4,"textLines":1,"bbox":[965,336,203,30]}
+{"kind":"textbox","id":"sh/l4vux0na","slide":6,"text":"价格、留存、可靠性、责任","textPreview":"价格、留存、可靠性、责任","textChars":12,"textLines":1,"bbox":[965,382,203,34]}
+{"kind":"textbox","id":"sh/m54vq54v","slide":6,"text":"Q001 的边界：现有材料足以识别展示对象和交互方式的变化；不足以证明相关技术已经普遍成熟采用。","textPreview":"Q001 的边界：现有材料足以识别展示对象和交互方式的变化；不足以证明相关技术已经普遍成熟采用。","textChars":48,"textLines":1,"bbox":[90,500,1100,56]}
+{"kind":"shape","id":"sh/n6dcza5g","slide":6,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/87mdsfm1","slide":6,"text":"来源：Q001、T001；来源多为摘要、会展材料与展商自报，需保留限制说明","textPreview":"来源：Q001、T001；来源多为摘要、会展材料与展商自报，需保留限制说明","textChars":37,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/urxwne","slide":6,"text":""}
+{"kind":"slide","id":"sl/g3c1zd","slide":7,"title":"PILOT LOOP","textShapes":15}
+{"kind":"textbox","id":"sh/qpwzup0z","slide":7,"text":"PILOT LOOP","textPreview":"PILOT LOOP","textChars":10,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/dsni54ja","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/crehwzi5","slide":7,"text":"Q001 试点证明：问题可以把资料池变成可审查答案","textPreview":"Q001 试点证明：问题可以把资料池变成可审查答案","textChars":25,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/zup0re1g","slide":7,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/etgzy90v","slide":7,"bbox":[254,273,70,0]}
+{"kind":"shape","id":"sh/lw7it4jm","slide":7,"bbox":[524,273,70,0]}
+{"kind":"shape","id":"sh/0vyh0ji1","slide":7,"bbox":[794,273,70,0]}
+{"kind":"shape","id":"sh/fylgva1c","slide":7,"bbox":[54,220,200,106]}
+{"kind":"shape","id":"sh/uxczm50r","slide":7,"bbox":[54,220,7,106]}
+{"kind":"textbox","id":"sh/gzmpkra5","slide":7,"text":"18 份来源","textPreview":"18 份来源","textChars":6,"textLines":1,"bbox":[74,240,166,24]}
+{"kind":"textbox","id":"sh/h0v6dwbq","slide":7,"text":"2018–2026；每年两类代表材料","textPreview":"2018–2026；每年两类代表材料","textChars":18,"textLines":1,"bbox":[74,272,166,36]}
+{"kind":"shape","id":"sh/ux47ihsz","slide":7,"bbox":[324,220,200,106]}
+{"kind":"shape","id":"sh/fydobmtk","slide":7,"bbox":[324,220,7,106]}
+{"kind":"textbox","id":"sh/4n6pobah","slide":7,"text":"4 条 claim","textPreview":"4 条 claim","textChars":9,"textLines":1,"bbox":[344,240,166,24]}
+{"kind":"textbox","id":"sh/pof6hgbm","slide":7,"text":"按阶段记录可判断主张与出处","textPreview":"按阶段记录可判断主张与出处","textChars":13,"textLines":1,"bbox":[344,272,166,36]}
+{"kind":"shape","id":"sh/2147m1sb","slide":7,"bbox":[594,220,200,106]}
+{"kind":"shape","id":"sh/32dof6tw","slide":7,"bbox":[594,220,7,106]}
+{"kind":"textbox","id":"sh/kr25c7ax","slide":7,"text":"1 条 tension","textPreview":"1 条 tension","textChars":11,"textLines":1,"bbox":[614,240,166,24]}
+{"kind":"textbox","id":"sh/5sb65cbi","slide":7,"text":"展示可见性不等于社会采用","textPreview":"展示可见性不等于社会采用","textChars":12,"textLines":1,"bbox":[614,272,166,36]}
+{"kind":"shape","id":"sh/1cjut4za","slide":7,"bbox":[864,220,200,106]}
+{"kind":"shape","id":"sh/0badkzip","slide":7,"bbox":[864,220,7,106]}
+{"kind":"textbox","id":"sh/za1cruh4","slide":7,"text":"1 份 synthesis","textPreview":"1 份 synthesis","textChars":13,"textLines":1,"bbox":[884,240,166,24]}
+{"kind":"textbox","id":"sh/e9svi90j","slide":7,"text":"形成可追溯的阶段性答案","textPreview":"形成可追溯的阶段性答案","textChars":11,"textLines":1,"bbox":[884,272,166,36]}
+{"kind":"shape","id":"sh/9g3exoz6","slide":7,"bbox":[54,390,524,172]}
+{"kind":"textbox","id":"sh/ofudojil","slide":7,"text":"已有的二阶解读资产","textPreview":"已有的二阶解读资产","textChars":9,"textLines":1,"bbox":[76,412,250,24]}
+{"kind":"textbox","id":"sh/nelcveh0","slide":7,"text":"不是丢弃旧 MECE、卡片和看板，而是把它们连接到可复查的证据链。","textPreview":"不是丢弃旧 MECE、卡片和看板，而是把它们连接到可复查的证据链。","textChars":33,"textLines":1,"bbox":[76,450,448,60]}
+{"kind":"textbox","id":"sh/xk3e1ozi","slide":7,"text":"现有 2026 看板：可成为输出层，不再是唯一知识入口","textPreview":"现有 2026 看板：可成为输出层，不再是唯一知识入口","textChars":27,"textLines":1,"bbox":[658,570,550,18]}
+{"kind":"shape","id":"sh/wjudsjix","slide":7,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/upormlgf","slide":7,"text":"来源：Q001-SOURCES、C001–C004、T001、SYN001；右图：4-outputs/2026/figures/0718-dashboard.png","textPreview":"来源：Q001-SOURCES、C001–C004、T001、SYN001；右图：4-outputs/2026/figures/0718-dashboard.png","textChars":82,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"image","id":"im/5ozuxc3i","slide":7,"name":"","geometry":"rect","alt":"WAIC 2026 interview dashboard","bbox":[642,390,584,172]}
+{"kind":"notes","id":"nt/g3c1zd","slide":7,"text":""}
+{"kind":"slide","id":"sl/gwx6xi","slide":8,"title":"SCALE BASELINE","textShapes":17}
+{"kind":"textbox","id":"sh/natk7u1k","slide":8,"text":"SCALE BASELINE","textPreview":"SCALE BASELINE","textChars":14,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/ob2lgzip","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/pcb294ja","slide":8,"text":"规模化的难点不在“资料不够”，而在身份与谱系不清","textPreview":"规模化的难点不在“资料不够”，而在身份与谱系不清","textChars":24,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/adk3i90v","slide":8,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/bed4be1g","slide":8,"bbox":[54,184,270,126]}
+{"kind":"shape","id":"sh/cfmlkji1","slide":8,"bbox":[54,184,6,126]}
+{"kind":"textbox","id":"sh/xgvmdojm","slide":8,"text":"860","textPreview":"860","textChars":3,"textLines":1,"bbox":[78,207,228,48]}
+{"kind":"textbox","id":"sh/yh43m907","slide":8,"text":"本地来源记录","textPreview":"本地来源记录","textChars":6,"textLines":1,"bbox":[78,266,228,26]}
+{"kind":"shape","id":"sh/zid4fe1c","slide":8,"bbox":[352,184,270,126]}
+{"kind":"shape","id":"sh/bmt4nq94","slide":8,"bbox":[352,184,6,126]}
+{"kind":"textbox","id":"sh/alknel8j","slide":8,"text":"835","textPreview":"835","textChars":3,"textLines":1,"bbox":[376,207,228,48]}
+{"kind":"textbox","id":"sh/xob6p0ra","slide":8,"text":"唯一 Get笔记 note_id","textPreview":"唯一 Get笔记 note_id","textChars":16,"textLines":1,"bbox":[376,266,228,26]}
+{"kind":"shape","id":"sh/wn25gvqp","slide":8,"bbox":[650,184,270,126]}
+{"kind":"shape","id":"sh/ny94jq98","slide":8,"bbox":[650,184,6,126]}
+{"kind":"textbox","id":"sh/2x0nal8n","slide":8,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[674,207,228,48]}
+{"kind":"textbox","id":"sh/pkbmlgry","slide":8,"text":"跨 raw/data 同源组","textPreview":"跨 raw/data 同源组","textChars":14,"textLines":1,"bbox":[674,266,228,26]}
+{"kind":"shape","id":"sh/oj25cvqd","slide":8,"bbox":[948,184,270,126]}
+{"kind":"shape","id":"sh/7udovapc","slide":8,"bbox":[948,184,6,126]}
+{"kind":"textbox","id":"sh/6t4nm58r","slide":8,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[972,207,228,48]}
+{"kind":"textbox","id":"sh/i987u9sz","slide":8,"text":"治理工作模式","textPreview":"治理工作模式","textChars":6,"textLines":1,"bbox":[972,266,228,26]}
+{"kind":"textbox","id":"sh/3ah8ne9k","slide":8,"text":"来源库存按事件年份分布","textPreview":"来源库存按事件年份分布","textChars":11,"textLines":1,"bbox":[54,356,340,24]}
+{"kind":"shape","id":"sh/5czqporq","slide":8,"bbox":[824,392,400,92]}
+{"kind":"shape","id":"sh/qd8ritsv","slide":8,"bbox":[824,392,6,92]}
+{"kind":"textbox","id":"sh/reh8ry9g","slide":8,"text":"不要把它当成行业热度图","textPreview":"不要把它当成行业热度图","textChars":11,"textLines":1,"bbox":[844,407,366,22]}
+{"kind":"textbox","id":"sh/sfq9k3a1","slide":8,"text":"它只反映当前资料覆盖和采集结构；2025–2026 更高，不能据此直接比较产业发展速度。","textPreview":"它只反映当前资料覆盖和采集结构；2025–2026 更高，不能据此直接比较产业发展速度。","textChars":44,"textLines":1,"bbox":[844,435,366,32]}
+{"kind":"shape","id":"sh/dgzqtorm","slide":8,"bbox":[824,502,400,92]}
+{"kind":"shape","id":"sh/6h47mpsr","slide":8,"bbox":[824,502,6,92]}
+{"kind":"textbox","id":"sh/7ix8futc","slide":8,"text":"注册表的第一项价值","textPreview":"注册表的第一项价值","textChars":9,"textLines":1,"bbox":[844,517,366,22]}
+{"kind":"textbox","id":"sh/pc3alsbu","slide":8,"text":"先把“本地文件身份”和“底层来源身份”分开，才能保留高保真副本并避免重复计数。","textPreview":"先把“本地文件身份”和“底层来源身份”分开，才能保留高保真副本并避免重复计数。","textChars":39,"textLines":1,"bbox":[844,545,366,32]}
+{"kind":"shape","id":"sh/obutsnu9","slide":8,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/nalsj2to","slide":8,"text":"来源：3-processing/index/source-registry.snapshot.json｜生成于 2026-07-21；按 eventYear 汇总","textPreview":"来源：3-processing/index/source-registry.snapshot.json｜生成于 2026-07-21；按 eventYear 汇总","textChars":81,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"chart","id":"ch/sja50jqh","slide":8,"name":"","chartType":"bar","bbox":[54,394,715,230]}
+{"kind":"notes","id":"nt/gwx6xi","slide":8,"text":""}
+{"kind":"slide","id":"sl/3a2edn","slide":9,"title":"TARGET OPERATING MODEL","textShapes":17}
+{"kind":"textbox","id":"sh/3mp0zed0","slide":9,"text":"TARGET OPERATING MODEL","textPreview":"TARGET OPERATING MODEL","textChars":22,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/4nyhsje5","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/po7i1ovq","slide":9,"text":"目标运行模型：让来源、判断与输出各归其位","textPreview":"目标运行模型：让来源、判断与输出各归其位","textChars":20,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/uxwzm9w3","slide":9,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/fy50vedo","slide":9,"bbox":[248,288,34,0]}
+{"kind":"shape","id":"sh/gjehoze9","slide":9,"bbox":[476,288,34,0]}
+{"kind":"shape","id":"sh/hknix4vu","slide":9,"bbox":[704,288,34,0]}
+{"kind":"shape","id":"sh/et0jytwn","slide":9,"bbox":[932,288,34,0]}
+{"kind":"shape","id":"sh/ze907yds","slide":9,"bbox":[54,240,194,106]}
+{"kind":"shape","id":"sh/za10v61c","slide":9,"bbox":[54,240,7,106]}
+{"kind":"textbox","id":"sh/y9sz210r","slide":9,"text":"Register","textPreview":"Register","textChars":8,"textLines":1,"bbox":[74,260,160,24]}
+{"kind":"textbox","id":"sh/lcjixgji","slide":9,"text":"来源身份、时间、指纹","textPreview":"来源身份、时间、指纹","textChars":10,"textLines":1,"bbox":[74,292,160,36]}
+{"kind":"shape","id":"sh/kbah4bix","slide":9,"bbox":[282,240,194,106]}
+{"kind":"shape","id":"sh/7el0z61o","slide":9,"bbox":[282,240,7,106]}
+{"kind":"textbox","id":"sh/mdcz6103","slide":9,"text":"Triage","textPreview":"Triage","textChars":6,"textLines":1,"bbox":[302,260,160,24]}
+{"kind":"textbox","id":"sh/9g3i1gju","slide":9,"text":"按问题与保真度排队","textPreview":"按问题与保真度排队","textChars":9,"textLines":1,"bbox":[302,292,160,36]}
+{"kind":"shape","id":"sh/8fuh8bi9","slide":9,"bbox":[510,240,194,106]}
+{"kind":"shape","id":"sh/v2l03q1k","slide":9,"bbox":[510,240,7,106]}
+{"kind":"textbox","id":"sh/uhczal0z","slide":9,"text":"Extract","textPreview":"Extract","textChars":7,"textLines":1,"bbox":[530,260,160,24]}
+{"kind":"textbox","id":"sh/qxg32pk7","slide":9,"text":"候选 claim 与定位","textPreview":"候选 claim 与定位","textChars":12,"textLines":1,"bbox":[530,292,160,36]}
+{"kind":"shape","id":"sh/rypkvuls","slide":9,"bbox":[738,240,194,106]}
+{"kind":"shape","id":"sh/szyl4z2d","slide":9,"bbox":[738,240,7,106]}
+{"kind":"textbox","id":"sh/d072xk3y","slide":9,"text":"Integrate","textPreview":"Integrate","textChars":9,"textLines":1,"bbox":[758,260,160,24]}
+{"kind":"textbox","id":"sh/i9w3y5kb","slide":9,"text":"claim、tension、synthesis","textPreview":"claim、tension、synthesis","textChars":23,"textLines":1,"bbox":[758,292,160,36]}
+{"kind":"shape","id":"sh/3a5kralw","slide":9,"bbox":[966,240,194,106]}
+{"kind":"shape","id":"sh/4bel0f2h","slide":9,"bbox":[966,240,7,106]}
+{"kind":"textbox","id":"sh/5wn2tk32","slide":9,"text":"Release","textPreview":"Release","textChars":7,"textLines":1,"bbox":[986,260,160,24]}
+{"kind":"textbox","id":"sh/2503a9kf","slide":9,"text":"PPT、卡片、报告","textPreview":"PPT、卡片、报告","textChars":9,"textLines":1,"bbox":[986,292,160,36]}
+{"kind":"shape","id":"sh/n6943el0","slide":9,"bbox":[54,430,1172,112]}
+{"kind":"textbox","id":"sh/x0b6t8n2","slide":9,"text":"横向治理层","textPreview":"横向治理层","textChars":5,"textLines":1,"bbox":[82,454,170,26]}
+{"kind":"textbox","id":"sh/cz2503mx","slide":9,"text":"Schema · 时间语义 · 保真度 · 冲突登记 · lint · 发布门禁","textPreview":"Schema · 时间语义 · 保真度 · 冲突登记 · lint · 发布门禁","textChars":40,"textLines":1,"bbox":[278,451,900,34]}
+{"kind":"textbox","id":"sh/bytory5c","slide":9,"text":"原始来源永远不被 Wiki 或输出层改写。","textPreview":"原始来源永远不被 Wiki 或输出层改写。","textChars":21,"textLines":1,"bbox":[278,495,880,24]}
+{"kind":"shape","id":"sh/axknyt4r","slide":9,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/pwb6pon6","slide":9,"text":"来源：Governance v1.0；SOURCE_REGISTRY_SCHEMA、INGESTION_PROTOCOL、LINT_AND_RELEASE","textPreview":"来源：Governance v1.0；SOURCE_REGISTRY_SCHEMA、INGESTION_PROTOCOL、LINT_AND_RELEASE","textChars":77,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/3a2edn","slide":9,"text":""}
+{"kind":"slide","id":"sl/0a7ehr","slide":10,"title":"GOVERNANCE CONTRACT","textShapes":22}
+{"kind":"textbox","id":"sh/h8rix0je","slide":10,"text":"GOVERNANCE CONTRACT","textPreview":"GOVERNANCE CONTRACT","textChars":19,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/u50j2lk3","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/f690vq1o","slide":10,"text":"五项治理契约，决定知识库是否可信","textPreview":"五项治理契约，决定知识库是否可信","textChars":16,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/s3y10b2x","slide":10,"bbox":[54,136,1172,0]}
+{"kind":"textbox","id":"sh/t47itgji","slide":10,"text":"契约","textPreview":"契约","textChars":2,"textLines":1,"bbox":[64,178,120,24]}
+{"kind":"textbox","id":"sh/61gjylkr","slide":10,"text":"必须保存什么","textPreview":"必须保存什么","textChars":6,"textLines":1,"bbox":[224,178,366,24]}
+{"kind":"textbox","id":"sh/72p0rq1c","slide":10,"text":"它解决什么问题","textPreview":"它解决什么问题","textChars":7,"textLines":1,"bbox":[632,178,270,24]}
+{"kind":"shape","id":"sh/cz21cf21","slide":10,"bbox":[54,210,1172,0]}
+{"kind":"shape","id":"sh/d0b25kjm","slide":10,"bbox":[54,218,1172,66]}
+{"kind":"shape","id":"sh/l8vm183u","slide":10,"bbox":[64,234,10,10]}
+{"kind":"textbox","id":"sh/07mls329","slide":10,"text":"身份","textPreview":"身份","textChars":2,"textLines":1,"bbox":[86,226,104,28]}
+{"kind":"textbox","id":"sh/z6d4zylo","slide":10,"text":"sourceId 与 canonicalSourceId 分离","textPreview":"sourceId 与 canonicalSourceId 分离","textChars":31,"textLines":1,"bbox":[224,226,366,38]}
+{"kind":"textbox","id":"sh/y543qtk3","slide":10,"text":"保留跨层高保真副本，避免重复计数","textPreview":"保留跨层高保真副本，避免重复计数","textChars":16,"textLines":1,"bbox":[632,226,270,38]}
+{"kind":"shape","id":"sh/d4bmxo3y","slide":10,"bbox":[64,312,10,10]}
+{"kind":"textbox","id":"sh/cj2loj2d","slide":10,"text":"时间","textPreview":"时间","textChars":2,"textLines":1,"bbox":[86,304,104,28]}
+{"kind":"textbox","id":"sh/bit4vels","slide":10,"text":"eventYear、publishedAt、capturedAt、asOf 分离","textPreview":"eventYear、publishedAt、capturedAt、asOf 分离","textChars":40,"textLines":1,"bbox":[224,304,366,38]}
+{"kind":"textbox","id":"sh/qhk3m9k7","slide":10,"text":"避免把采集日期错当作历史趋势","textPreview":"避免把采集日期错当作历史趋势","textChars":14,"textLines":1,"bbox":[632,304,270,38]}
+{"kind":"shape","id":"sh/x0fm9sj2","slide":10,"bbox":[54,374,1172,66]}
+{"kind":"shape","id":"sh/wz650n2h","slide":10,"bbox":[64,390,10,10]}
+{"kind":"textbox","id":"sh/gvyxsvep","slide":10,"text":"保真度","textPreview":"保真度","textChars":3,"textLines":1,"bbox":[86,382,104,28]}
+{"kind":"textbox","id":"sh/hw7ylgva","slide":10,"text":"verbatim / structured / summary / unknown","textPreview":"verbatim / structured / summary / unknown","textChars":41,"textLines":1,"bbox":[224,382,366,38]}
+{"kind":"textbox","id":"sh/utwfqlwz","slide":10,"text":"不把摘要改写成发言原话","textPreview":"不把摘要改写成发言原话","textChars":11,"textLines":1,"bbox":[632,382,270,38]}
+{"kind":"shape","id":"sh/fupgjqdk","slide":10,"bbox":[64,468,10,10]}
+{"kind":"textbox","id":"sh/srexobet","slide":10,"text":"冲突","textPreview":"冲突","textChars":2,"textLines":1,"bbox":[86,460,104,28]}
+{"kind":"textbox","id":"sh/tsnehgve","slide":10,"text":"claim 不一致时进入 tension","textPreview":"claim 不一致时进入 tension","textChars":20,"textLines":1,"bbox":[224,460,366,38]}
+{"kind":"textbox","id":"sh/6pwfm1wn","slide":10,"text":"新材料不能静默覆盖旧判断","textPreview":"新材料不能静默覆盖旧判断","textChars":12,"textLines":1,"bbox":[632,460,270,38]}
+{"kind":"shape","id":"sh/7q5wf6d8","slide":10,"bbox":[54,530,1172,66]}
+{"kind":"shape","id":"sh/knexkbex","slide":10,"bbox":[64,546,10,10]}
+{"kind":"textbox","id":"sh/5onedwv2","slide":10,"text":"发布","textPreview":"发布","textChars":2,"textLines":1,"bbox":[86,538,104,28]}
+{"kind":"textbox","id":"sh/nylgn6h4","slide":10,"text":"核心结论必须回到 claim 与来源","textPreview":"核心结论必须回到 claim 与来源","textChars":18,"textLines":1,"bbox":[224,538,366,38]}
+{"kind":"textbox","id":"sh/mxcfu1gj","slide":10,"text":"防止卡片、PPT 反向成为事实来源","textPreview":"防止卡片、PPT 反向成为事实来源","textChars":17,"textLines":1,"bbox":[632,538,270,38]}
+{"kind":"shape","id":"sh/9k3ypwza","slide":10,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/8zuxwryp","slide":10,"text":"来源：SOURCE_REGISTRY_SCHEMA v1.0；LINT_AND_RELEASE v1.0","textPreview":"来源：SOURCE_REGISTRY_SCHEMA v1.0；LINT_AND_RELEASE v1.0","textChars":52,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/0a7ehr","slide":10,"text":""}
+{"kind":"slide","id":"sl/j9alud","slide":11,"title":"OPERATING CADENCE","textShapes":15}
+{"kind":"textbox","id":"sh/d8r65gni","slide":11,"text":"OPERATING CADENCE","textPreview":"OPERATING CADENCE","textChars":17,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/ql07u1or","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/bm9o365c","slide":11,"text":"治理不是一次性整理，而是一套持续运行的节奏","textPreview":"治理不是一次性整理，而是一套持续运行的节奏","textChars":21,"textLines":1,"bbox":[54,66,1172,60]}
+{"kind":"shape","id":"sh/ojypsr6l","slide":11,"bbox":[54,136,1172,0]}
+{"kind":"shape","id":"sh/pkr61wn6","slide":11,"bbox":[54,180,234,58]}
+{"kind":"textbox","id":"sh/2hg7q1ov","slide":11,"text":"每次 raw 增量后","textPreview":"每次 raw 增量后","textChars":10,"textLines":1,"bbox":[72,197,198,24]}
+{"kind":"shape","id":"sh/3ipozm5g","slide":11,"bbox":[298,209,46,0]}
+{"kind":"shape","id":"sh/gfypor6p","slide":11,"bbox":[366,180,856,58]}
+{"kind":"shape","id":"sh/1g76xwna","slide":11,"bbox":[366,180,6,58]}
+{"kind":"textbox","id":"sh/1s32hs3y","slide":11,"text":"重建注册表，标出新增、变更与同源候选","textPreview":"重建注册表，标出新增、变更与同源候选","textChars":18,"textLines":1,"bbox":[390,197,804,24]}
+{"kind":"shape","id":"sh/gru18nmd","slide":11,"bbox":[54,262,234,58]}
+{"kind":"textbox","id":"sh/f6lkfil8","slide":11,"text":"每周","textPreview":"每周","textChars":2,"textLines":1,"bbox":[72,279,198,24]}
+{"kind":"shape","id":"sh/e5sj6d4n","slide":11,"bbox":[298,291,46,0]}
+{"kind":"shape","id":"sh/t4j2d832","slide":11,"bbox":[366,262,856,58]}
+{"kind":"shape","id":"sh/s3a143mh","slide":11,"bbox":[366,262,6,58]}
+{"kind":"textbox","id":"sh/r21kbilw","slide":11,"text":"围绕活跃 question 整理 A/B/C 来源队列","textPreview":"围绕活跃 question 整理 A/B/C 来源队列","textChars":27,"textLines":1,"bbox":[390,279,804,24]}
+{"kind":"shape","id":"sh/61sj2d4b","slide":11,"bbox":[54,344,234,58]}
+{"kind":"textbox","id":"sh/50j2983q","slide":11,"text":"每两周","textPreview":"每两周","textChars":3,"textLines":1,"bbox":[72,361,198,24]}
+{"kind":"shape","id":"sh/4za103m5","slide":11,"bbox":[298,373,46,0]}
+{"kind":"shape","id":"sh/wju1g3u1","slide":11,"bbox":[366,344,856,58]}
+{"kind":"shape","id":"sh/xkn2p8bm","slide":11,"bbox":[366,344,6,58]}
+{"kind":"textbox","id":"sh/ahcjetcb","slide":11,"text":"摄取高价值来源，更新 claim、tension 与 synthesis","textPreview":"摄取高价值来源，更新 claim、tension 与 synthesis","textChars":36,"textLines":1,"bbox":[390,361,804,24]}
+{"kind":"shape","id":"sh/bilknytw","slide":11,"bbox":[54,426,234,58]}
+{"kind":"textbox","id":"sh/ofu1c3u5","slide":11,"text":"每月","textPreview":"每月","textChars":2,"textLines":1,"bbox":[72,443,198,24]}
+{"kind":"shape","id":"sh/9g32l8bq","slide":11,"bbox":[298,455,46,0]}
+{"kind":"shape","id":"sh/mdcjatcz","slide":11,"bbox":[366,426,856,58]}
+{"kind":"shape","id":"sh/nelkjytk","slide":11,"bbox":[366,426,6,58]}
+{"kind":"textbox","id":"sh/sbylonu9","slide":11,"text":"审查综合页是否过期、是否出现未处理冲突","textPreview":"审查综合页是否过期、是否出现未处理冲突","textChars":19,"textLines":1,"bbox":[390,443,804,24]}
+{"kind":"shape","id":"sh/tc72xsbu","slide":11,"bbox":[54,508,234,58]}
+{"kind":"textbox","id":"sh/3694nmdw","slide":11,"text":"每季度","textPreview":"每季度","textChars":3,"textLines":1,"bbox":[72,525,198,24]}
+{"kind":"shape","id":"sh/250nuhwr","slide":11,"bbox":[298,537,46,0]}
+{"kind":"shape","id":"sh/p8rmpwv2","slide":11,"bbox":[366,508,856,58]}
+{"kind":"shape","id":"sh/47i5wreh","slide":11,"bbox":[366,508,6,58]}
+{"kind":"textbox","id":"sh/rat4r6d8","slide":11,"text":"抽样审计证据链，并更新 schema 与词汇规则","textPreview":"抽样审计证据链，并更新 schema 与词汇规则","textChars":24,"textLines":1,"bbox":[390,525,804,24]}
+{"kind":"shape","id":"sh/q90ny1wn","slide":11,"bbox":[54,606,1172,44]}
+{"kind":"textbox","id":"sh/dwb6twve","slide":11,"text":"质量指标：注册覆盖率 · 可回溯率 · 高保真占比 · 过期率。不要以节点数量或链接数量为目标。","textPreview":"质量指标：注册覆盖率 · 可回溯率 · 高保真占比 · 过期率。不要以节点数量或链接数量为目标。","textChars":48,"textLines":1,"bbox":[72,618,1130,20]}
+{"kind":"shape","id":"sh/cb250bet","slide":11,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/7ep4f2d4","slide":11,"text":"来源：OPERATING_CADENCE v1.0","textPreview":"来源：OPERATING_CADENCE v1.0","textChars":25,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/j9alud","slide":11,"text":""}
+{"kind":"slide","id":"sl/9gtwxb","slide":12,"title":"DECISION","textShapes":11}
+{"kind":"textbox","id":"sh/rm5c7ux8","slide":12,"text":"DECISION","textPreview":"DECISION","textChars":8,"textLines":1,"bbox":[54,30,560,22]}
+{"kind":"textbox","id":"sh/snet0fed","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1184,30,42,22]}
+{"kind":"textbox","id":"sh/to7u9kfy","slide":12,"text":"下一步不是再写 835 篇摘要，\n而是把每一次新证据都接入同一条判断链。","textPreview":"下一步不是再写 835 篇摘要， | 而是把每一次新证据都接入同一条判断链。","textChars":36,"textLines":2,"bbox":[54,144,1050,176]}
+{"kind":"textbox","id":"sh/epgb2pwj","slide":12,"text":"建议立即生效的三项决定","textPreview":"建议立即生效的三项决定","textChars":11,"textLines":1,"bbox":[54,392,420,28]}
+{"kind":"shape","id":"sh/fqpcbux4","slide":12,"bbox":[54,443,10,10]}
+{"kind":"textbox","id":"sh/gryt4zep","slide":12,"text":"注册表成为来源库存的当前权威","textPreview":"注册表成为来源库存的当前权威","textChars":14,"textLines":1,"bbox":[78,438,1026,24]}
+{"kind":"textbox","id":"sh/1s7ud4fa","slide":12,"text":"旧拉取索引保留为历史快照，不再承担全量治理职责。","textPreview":"旧拉取索引保留为历史快照，不再承担全量治理职责。","textChars":24,"textLines":1,"bbox":[78,466,1026,34]}
+{"kind":"shape","id":"sh/utcbq5gf","slide":12,"bbox":[54,519,10,10]}
+{"kind":"textbox","id":"sh/vulszax0","slide":12,"text":"所有批量摄取必须绑定 question","textPreview":"所有批量摄取必须绑定 question","textChars":19,"textLines":1,"bbox":[78,514,1026,24]}
+{"kind":"textbox","id":"sh/jutkzils","slide":12,"text":"先解决问题，再扩大知识资产；避免无目标的摘要生产。","textPreview":"先解决问题，再扩大知识资产；避免无目标的摘要生产。","textChars":25,"textLines":1,"bbox":[78,542,1026,34]}
+{"kind":"shape","id":"sh/itk3qxk7","slide":12,"bbox":[54,595,10,10]}
+{"kind":"textbox","id":"sh/5wv21s3y","slide":12,"text":"对外产出只从通过门禁的 synthesis 派生","textPreview":"对外产出只从通过门禁的 synthesis 派生","textChars":24,"textLines":1,"bbox":[78,590,1026,24]}
+{"kind":"textbox","id":"sh/kvmlsn2d","slide":12,"text":"把展示、厂商主张、局部运营和社会采用明确区分。","textPreview":"把展示、厂商主张、局部运营和社会采用明确区分。","textChars":23,"textLines":1,"bbox":[78,618,1026,34]}
+{"kind":"shape","id":"sh/vqtkvilg","slide":12,"bbox":[54,670,1172,0]}
+{"kind":"textbox","id":"sh/apk3mdkb","slide":12,"text":"结论：从资料库走向证据 Wiki，核心不是更多内容，而是更稳定的判断能力。","textPreview":"结论：从资料库走向证据 Wiki，核心不是更多内容，而是更稳定的判断能力。","textChars":37,"textLines":1,"bbox":[54,681,1172,18]}
+{"kind":"notes","id":"nt/9gtwxb","slide":12,"text":""}

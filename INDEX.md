@@ -1,26 +1,26 @@
 # 📇 项目总索引 · WAIC 2026 开放解读档案
 
 > 数据流水线：**1-raw → 2-data → 3-processing → 4-outputs**
-> 来源知识库：**2026 WAIC 世界人工智能大会知识库**（Get笔记 topic `JawjeBlY`）· 生成日期 2026-07-20
+> 来源知识库：**2026 WAIC 世界人工智能大会知识库**（Get笔记 topic `JawjeBlY`）· 更新日期 2026-07-21
 
 ## 四层结构总览
 
 | 层 | 目录 | 语义 | 篇数 | 关键索引 |
 |---|---|---|---:|---|
-| 1 | `1-raw/` | 得到笔记原始信息（getnote 拉取，含 note_id） | 833 | [拉取索引](3-processing/index/waic-kb-pull-index.md) |
+| 1 | `1-raw/` | 得到笔记原始信息（getnote 拉取，含 note_id） | 836 | [内部索引](1-raw/INDEX.md) |
 | 2 | `2-data/` | 我之前手工整理的信息（完整逐字稿 / 人工分组） | 25 | 见下方分组 |
-| 3 | `3-processing/` | 数据整理后的文档（MECE 对话录 / 问题清单 / 索引） | 10 | — |
+| 3 | `3-processing/` | MECE 文档、索引与以问题为入口的语义 Wiki | 持续演进 | [Wiki 入口](3-processing/wiki/HOME.md) |
 | 4 | `4-outputs/` | 产出物（卡片图 / 看板 / PDF 合集） | — | 图片+PDF |
 
 ## 1-raw/ — getnote 原始档案（按 WAIC 届次 + 2026 内容型）
 
-完整覆盖 KB **833/833** 笔记，0 缺失。每篇 frontmatter 带 `note_id`，为去重唯一键。
+当前本地共有 **836** 篇带 `note_id` 的笔记。`1-raw/INDEX.md` 是最新目录计数；逐条拉取索引仍是 833 条 KB 记录的较早快照。
 
 | 目录 | 篇数 |
 |---|---:|
 | `WAIC-2026当届/现场录音实录/` | 15 |
 | `WAIC-2026当届/论坛演讲实录/` | 272 |
-| `WAIC-2026当届/资讯与链接/` | 66 |
+| `WAIC-2026当届/资讯与链接/` | 69 |
 | `专题研究/` | 9 |
 | `往年届次/WAIC-2018/` | 31 |
 | `往年届次/WAIC-2019/` | 53 |
@@ -41,8 +41,15 @@
 | `直播分享/` | 7 | 论坛/发布会完整逐字稿（4万–11万字，远比摘要丰富） |
 | `高质量论坛-清华治理/` | 10 | 清华·全球AI治理路径论坛系列 |
 
+## 3-processing/wiki/ — 持久语义知识层
+
+Wiki 不按文章数量扩张，而是围绕用户问题摄取来源，积累可回溯的 claim、冲突和跨来源结论。
+
+- [Wiki 主入口](3-processing/wiki/HOME.md)
+- [Q001：历年 WAIC 的变化，普通人能看到什么？](3-processing/wiki/questions/Q001-历年WAIC的变化，普通人能看到什么.md)
+
 ## 去重与增量拉取机制
 
 - **唯一键**：`1-raw` 每篇 frontmatter 的 `note_id` 与 KB 对齐。
 - **拉取前 check**：新增拉取前，用 `note_id` 与本地求差集，只拉新增，绝不重复。
-- **当前状态**：KB 833 条已全部拉取；`3-processing/index/to-pull.ids.txt` 为空（无待拉取）。KB 持续更新，下次重拉索引再算差集即可。
+- **当前状态**：本地 raw 为 835 条；`3-processing/index/waic-kb-pull-index.md` 仍是 833 条 KB 记录的旧快照，后续应单独刷新明细索引。

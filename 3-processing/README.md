@@ -1,77 +1,43 @@
-# 2-processing/ · 第二大块：整理后数据
+# 3-processing/ · 加工与语义知识层
 
-> 把 `1-data/<year>/` 里的原始笔记归一化成稳定的 schema，让下游分析脚本不用关心原始格式差异。
+> 这里保存从原始来源中形成的结构化索引、既有二阶解读和可持续更新的 LLM Wiki。
 
----
+## 当前结构
 
-## 结构
-
-```
-2-processing/
-└── 2026/                  ← 当前活跃年度
-    ├── notes.csv          ← 全部 note 一行一条
-    ├── companies.csv      ← 公司维度聚合
-    ├── topics.json        ← 议题聚类结果
-    └── ...
-```
-
-> 历史年度等以后需要对比时再启用。
-
-## 当前 schema
-
-### `notes.csv`
-
-| 列 | 类型 | 说明 |
-| --- | --- | --- |
-| `note_id` | str | 唯一 ID |
-| `date` | str | 采访日期（YYYY-MM-DD） |
-| `interviewee` | str | 被访者 |
-| `company` | str | 被访者公司 |
-| `title` | str | 笔记标题 |
-| `duration_sec` | int | 音频时长 |
-| `transcript_len` | int | 文字稿字数 |
-| `tags` | str | 用 `\|` 分隔 |
-| `source_path` | str | 对应 `1-data/<year>/` 下的源文件路径 |
-
-### `companies.csv`
-
-| 列 | 类型 | 说明 |
-| --- | --- | --- |
-| `company` | str | 公司名 |
-| `mentions` | int | 在该年所有 note 中被提及的次数 |
-| `note_count` | int | 该公司被访次数 |
-
-### `topics.json`
-
-```json
-{
-  "year": 2026,
-  "topics": [
-    {
-      "topic_id": "t01",
-      "label": "大模型应用",
-      "note_ids": ["2026-07-XX__...", "..."],
-      "keywords": ["应用", "落地", "场景"]
-    }
-  ]
-}
+```text
+3-processing/
+├── index/             # 拉取清单与待处理索引
+├── governance/        # 来源注册、摄取、lint 与发布规范
+├── 2026/              # 已有 MECE 对话录和问题清单
+└── wiki/              # 以问题为入口的持久语义知识层
+    ├── HOME.md
+    ├── _indexes/
+    ├── _schema/
+    ├── claims/
+    ├── concepts/
+    ├── questions/
+    ├── releases/
+    ├── syntheses/
+    └── tensions/
 ```
 
-## 如何生成
+## 语义边界
 
-```bash
-# 归一化所有 note 到 CSV
-python scripts/normalize.py --year 2026
+- `1-raw/` 和 `2-data/` 是证据来源，本目录不覆盖它们。
+- `index/` 回答“有哪些资料”。
+- `governance/` 定义来源注册、问题摄取、lint 与发布门禁。
+- `2026/` 保留已有的二阶加工结果。
+- `wiki/` 回答“这些资料共同说明了什么”，并用 `release` 记录知识对象与交付物的映射。
+- `4-outputs/` 是发布层，不作为 Wiki 的一手证据；输出变更必须回到 claim/synthesis 更新。
 
-# 生成 companies.csv（频次统计）
-python scripts/analyze.py --year 2026 --kind companies
-```
+## 当前入口
 
-## 入库策略
-
-| 文件 | 入库？ | 原因 |
-| --- | --- | --- |
-| `notes.csv` | ✅ | 体积小，可被 git diff |
-| `companies.csv` | ✅ | 同上 |
-| `topics.json` | ✅ | 同上 |
-| 任何 > 1MB | ❌ | 拆出去或 gitignore |
+- [WAIC LLM Wiki](wiki/HOME.md)
+- [Governance v1.1](governance/README.md)
+- [Wiki schema v0.2](wiki/_schema/SCHEMA.md)
+- [Q001：历年 WAIC 的变化，普通人能看到什么？](wiki/questions/Q001-历年WAIC的变化，普通人能看到什么.md)
+- [SYN001：2018–2026 WAIC 变化的普通人视角](wiki/syntheses/SYN001-2018至2026-WAIC变化的普通人视角.md)
+- [Q002：AI 责任半径扩大后，应用、岗位与治理如何联动？](wiki/questions/Q002-AI责任半径扩大后，应用、岗位与治理如何联动.md)
+- [SYN002：AI 演进、应用、就业与治理战略综合](wiki/syntheses/SYN002-AI演进、应用、就业与治理战略综合.md)
+- [REL001：WAIC 战略研究报告发布映射](wiki/releases/REL001-WAIC战略研究报告发布映射.md)
+- [主知识库接入说明](governance/MAIN_KB_INTEGRATION.md)

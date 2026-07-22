@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-07-21T04:52:52.185Z",
+  "registryPath": "3-processing/index/source-registry.jsonl",
+  "recordCount": 860,
+  "uniqueSourceIds": 860,
+  "uniqueNoteIds": 835,
+  "byLayer": {
+    "raw": 835,
+    "data": 25
+  },
+  "byFidelity": {
+    "unknown": 835,
+    "structured": 13,
+    "verbatim": 12
+  },
+  "duplicateSourceIds": [],
+  "duplicateCanonicalSourceIds": [
+    "note:1915869260161415032",
+    "note:1915869735829537888",
+    "note:1915869380421130104",
+    "note:1915869580136434296",
+    "note:1915869656372254584",
+    "note:1915869808844491384",
+    "note:1915869159229654112",
+    "note:1915848747399813872",
+    "note:1915855211323387872",
+    "note:1915955733959690872",
+    "note:1915935477820181112",
+    "note:1915951560325896056",
+    "note:1915955751139050592"
+  ],
+  "sourceRoots": [
+    "1-raw",
+    "2-data"
+  ],
+  "note": "Generated from source frontmatter and content hashes. Semantic lineage and review status require later review."
+}
