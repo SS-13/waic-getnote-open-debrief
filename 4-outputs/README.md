@@ -6,6 +6,7 @@
 
 - [2026 年输出索引](2026/README.md)：当前年度的全部正式交付物。
 - [WAIC 2018–2026 深度战略研究](2026/reports/waic-strategic-research-2018-2026/README.md)：基于全库样本的推荐版本，含 Markdown、图文 PDF、22 页 PPT 与 8 张独立图表。
+- [FDE 2026 中美企业 AI 部署与治理行业报告](2026/reports/fde-industry-report-2026/README.md)：岗位、部署方法、Agent 自治和治理的专项研究。
 - [第一版跨年 WAIC 研究](2026/reports/waic-2018-2026/README.md)：早期 12 页汇报版，保留用于版本回溯。
 
 ## 目录约定
@@ -15,6 +16,7 @@
 | `2026/reports/waic-strategic-research-2018-2026/` | 深度战略研究的文字、PDF 与 PPT | 默认优先引用。 |
 | `2026/figures/waic-strategic-research-2018-2026/` | 深度战略研究的 8 张独立图表 | 可单独用于文章、汇报和投屏。 |
 | `2026/reports/waic-2018-2026/` | 第一版跨年研究 | 用于版本回溯。 |
+| `2026/reports/fde-industry-report-2026/` | FDE 专项行业报告 | 默认引用 SYN003 的文字交付。 |
 | `2026/reports/0717/`、`0718/` | 2026 WAIC 流水席的正式单场卡片 | 可按卡片标题引用。 |
 | `2026/reports/0717_old/`、`0718_old/` | 正式卡片的保留历史版本 | 不作为默认引用版本。 |
 | `2026/figures/` | 看板、问题清单长图与卡片图集 | 用于浏览和演示，保留原文件名。 |

@@ -40,4 +40,8 @@
 - [Q002：AI 责任半径扩大后，应用、岗位与治理如何联动？](wiki/questions/Q002-AI责任半径扩大后，应用、岗位与治理如何联动.md)
 - [SYN002：AI 演进、应用、就业与治理战略综合](wiki/syntheses/SYN002-AI演进、应用、就业与治理战略综合.md)
 - [REL001：WAIC 战略研究报告发布映射](wiki/releases/REL001-WAIC战略研究报告发布映射.md)
+- [Q003：FDE 如何将企业转化为可治理的 AI 运行系统，中美路径有何差异？](wiki/questions/Q003-FDE如何将企业转化为可治理的AI运行系统，中美路径有何差异.md)
+- [SYN003：FDE 中美企业 AI 部署与治理产业研判](wiki/syntheses/SYN003-FDE中美企业AI部署与治理产业研判.md)
+- [K005：Agent 自治与责任矩阵](wiki/concepts/K005-Agent自治与责任矩阵.md)
+- [REL002：FDE 行业报告发布映射](wiki/releases/REL002-FDE行业报告发布映射.md)
 - [主知识库接入说明](governance/MAIN_KB_INTEGRATION.md)

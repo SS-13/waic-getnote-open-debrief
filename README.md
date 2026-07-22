@@ -41,6 +41,14 @@
 
 这份研究不只存放在输出目录，已经回写为可追踪的 Wiki 升级：新增 [Q002](3-processing/wiki/questions/Q002-AI责任半径扩大后，应用、岗位与治理如何联动.md)、[SYN002](3-processing/wiki/syntheses/SYN002-AI演进、应用、就业与治理战略综合.md)、4 个分析概念和 [REL001 发布映射](3-processing/wiki/releases/REL001-WAIC战略研究报告发布映射.md)。系统已作为 `waic-research` 接入 Joseph's Garden 主知识库，具体映射、状态协议与自检时序见 [主知识库接入说明](3-processing/governance/MAIN_KB_INTEGRATION.md)。
 
+## FDE 专项研究
+
+FDE（Forward Deployed Engineer）研究把企业 AI 的问题从“如何做一个 Agent”转成“如何把业务、数据、权限、模型、组织和持续治理组成生产系统”。报告基于 WAIC 历届企业部署材料、OpenAI/Palantir/Anthropic 官方岗位页及中美治理资料，采用能力形态而非单一职位名比较中美路径。
+
+- [完整行业报告](4-outputs/2026/reports/fde-industry-report-2026/FDE-2026-中美企业AI部署与治理行业报告.md)
+- [Wiki 综合 SYN003](3-processing/wiki/syntheses/SYN003-FDE中美企业AI部署与治理产业研判.md)
+- [Agent 自治与责任矩阵 K005](3-processing/wiki/concepts/K005-Agent自治与责任矩阵.md)
+
 ---
 
 ## 🎯 这不是什么
