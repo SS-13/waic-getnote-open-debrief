@@ -3,8 +3,8 @@ id: Q003-SOURCES
 type: source-index
 question_ids: [Q003]
 created_at: 2026-07-22
-as_of: 2026-07-22
-source_count: 17
+as_of: 2026-08-02
+source_count: 18
 ---
 
 # Q003 来源索引
@@ -30,9 +30,11 @@ source_count: 17
 | SRC-Q003-15 | 中国政府政策 | official | 战略、组织、流程与 AI 服务商方向 | [人工智能+](https://www.gov.cn/zhengce/content/202508/content_7037861.htm) |
 | SRC-Q003-16 | 公开社区搜索 | weak-signal | 中文职业内容出现，不用作规模判断 | [B站 FDE 搜索](https://search.bilibili.com/all?keyword=FDE%20AI) |
 | SRC-Q003-17 | 中国政府政策 | official | 生成式 AI 服务的基础合规要求 | [暂行办法](https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm) |
+| SRC-Q003-18 | 飞书社区作者白皮书 | structured | FDE 框架、国内“业务翻译—最小闭环”观点、21 项能力模型；市场数字需回查 | [来源解读与蜂巢评分](SRC-Q003-18-飞书社区FDE人才白皮书-解读与蜂巢评分.md) |
 
 ## 来源限制
 
 - `summary` 级 WAIC 资料是现场整理或二阶摘要，不能改写为逐字引语。
 - 中国市场没有采用职位聚合网站的未经审核数量；因此只比较公开组织形态和能力信号。
 - B 站结果含培训和营销标题，只保留为“职业传播已出现”的弱信号，不进入核心结论。
+- 飞书社区白皮书可证明作者陈宇锋于 2026-07-31 发布了该框架，不能单独证明其中的招聘增速、薪资、融资、团队规模或行业普遍性；具体边界见其来源解读卡。

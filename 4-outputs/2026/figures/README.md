@@ -1,5 +1,9 @@
 # Figures 索引
 
+## 知识库治理
+
+- [蜂巢式知识置信度评分流程图](beehive-confidence-scoring.png)：新资料、独立核验、谱系去重、收敛与发布门禁。
+
 ## 深度战略研究
 
 - [WAIC 2018–2026 深度战略研究 figures](waic-strategic-research-2018-2026/README.md)：8 张 1600×900 图表，覆盖演进、证据、应用、普通人、岗位和治理。

@@ -1,5 +1,9 @@
 # 报告目录
 
+## 知识库治理
+
+- [蜂巢式知识置信度评分系统](beehive-confidence-scoring/README.md)：面向 WAIC 与持续资料接入的来源与 Claim 双层评分体系。
+
 ## 主题报告
 
 - [WAIC 2018–2026 深度战略研究（推荐）](waic-strategic-research-2018-2026/README.md)：全库样本战略分析、专业图文 PDF 与 22 页科技风 PPT。

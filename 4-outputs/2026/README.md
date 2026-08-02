@@ -6,6 +6,7 @@
 
 | 需要什么 | 位置 | 说明 |
 | --- | --- | --- |
+| 知识库置信度治理 | [reports/beehive-confidence-scoring/](reports/beehive-confidence-scoring/README.md) | 来源 SQS、Claim CCS、谱系去重、流程图与专业 PDF。 |
 | 深度战略研究（推荐） | [reports/waic-strategic-research-2018-2026/](reports/waic-strategic-research-2018-2026/README.md) | 全库样本、外部岗位数据、国内外政策、MD/PDF/PPT。 |
 | FDE 行业研究 | [reports/fde-industry-report-2026/](reports/fde-industry-report-2026/README.md) | 中美企业 AI 部署角色、Agent 自治与治理报告。 |
 | 独立研究图表 | [figures/waic-strategic-research-2018-2026/](figures/waic-strategic-research-2018-2026/README.md) | 8 张 1600×900 可复用 figures。 |
@@ -16,6 +17,7 @@
 
 推荐研究已登记到 Wiki [REL001 发布映射](../../3-processing/wiki/releases/REL001-WAIC战略研究报告发布映射.md)，用于追踪报告、PPT、PDF、figures 与知识对象之间的关系。
 FDE 行业报告已登记到 [REL002](../../3-processing/wiki/releases/REL002-FDE行业报告发布映射.md)，可追溯至 Q003、C010-C014、T003 和 K005。
+置信度评分系统已登记到 [REL003](../../3-processing/wiki/releases/REL003-蜂巢式知识置信度评分系统发布映射.md)，用于治理持续接入的资料与后续发布门禁。
 
 ## 内容分层
 

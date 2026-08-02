@@ -1,4 +1,4 @@
-# WAIC LLM Wiki Schema v0.2
+# WAIC LLM Wiki Schema v0.3
 
 ## 目标
 
@@ -48,6 +48,8 @@
 6. 没有足够证据的内容标为 `hypothesis` 或 `unknown`。
 7. `release` 只能指向已经存在的 synthesis 与交付文件；输出层不得反向成为 claim 的证据。
 8. 报告修订影响核心判断时，先更新 claim/synthesis，再更新 release 映射和交付物。
+9. 来源保真度与来源可靠度不同：`fidelity` 描述表达距离，SQS 描述其对直接事实的可靠度。
+10. Claim 的 CCS 必须在独立账本中记录谱系去重、反证惩罚、复审条件和审核状态；A/B、核心和发布级 Claim 未获 Joe 复核时不得作为新的正式 release 的独立依据。
 
 ## 来源保真度
 
@@ -69,6 +71,7 @@
 5. 登记 tension、未知项和反证。
 6. 更新 question 与 synthesis，并记录 `as_of`。
 7. 执行结构 lint 和语义 lint。
+8. 对被引用来源补充 SQS；对核心 Claim 补充 CCS，并在新证据或反证出现时复审。
 
 ## 回答格式
 

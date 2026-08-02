@@ -1,15 +1,17 @@
-# waic-getnote-open-debrief
+# WAIC AI 战略研究
 
-> **WAIC 2018–2026 · 原始资料、二阶解读与问题驱动 Wiki**
-> 整理：Joe · Wiki 启动日期：2026-07-21
+> **WAIC 2018–2026 的原始资料、二阶解读与问题驱动 Wiki**
+> 整理：Joe · 这是个人 AI 总知识库中的 WAIC 专题研究子系统。
 
 ---
 
 ## 📌 这是什么
 
-这是一个持续演进的**知识库**，不是技术应用仓库。
+这是一个持续演进的 **WAIC 专题研究知识库**，不是技术应用仓库，也不是承载全部 AI 课程、资讯和个人想法的通用笔记目录。
 
 项目从 2026 WAIC 下午流水席 37 场嘉宾访谈的二阶解读起步，目前已经扩展为 2018–2026 WAIC 资料池，并增加了以真实问题为入口的 LLM Wiki。原始资料负责保真，Wiki 负责积累可追溯的主张、冲突和跨来源判断。
+
+AI 总知识库的总入口、课程、项目能力和个人决策维护在 Joseph's Garden；本仓库只负责 WAIC 的证据与研究链。完整边界与接入方法见 [AI 总知识库架构](3-processing/governance/AI_TOTAL_KB_ARCHITECTURE.md)。
 
 ---
 
@@ -48,6 +50,17 @@ FDE（Forward Deployed Engineer）研究把企业 AI 的问题从“如何做一
 - [完整行业报告](4-outputs/2026/reports/fde-industry-report-2026/FDE-2026-中美企业AI部署与治理行业报告.md)
 - [Wiki 综合 SYN003](3-processing/wiki/syntheses/SYN003-FDE中美企业AI部署与治理产业研判.md)
 - [Agent 自治与责任矩阵 K005](3-processing/wiki/concepts/K005-Agent自治与责任矩阵.md)
+
+## 蜂巢式知识置信度评分
+
+资料会持续进入这个知识库：新的 WAIC、政府文件、研究报告、厂商公告、新闻与日常线索。它们不应因热度或转载量获得相同权重。系统现已建立两层评分：来源可靠度 `SQS` 评价一份资料对其直接事实的可靠度；Claim 结论置信度 `CCS` 评价一个判断是否获得独立证据谱系的支撑。
+
+- [评分体系说明与专业 PDF](4-outputs/2026/reports/beehive-confidence-scoring/README.md)
+- [蜂巢式置信度与证据收敛 K006](3-processing/wiki/concepts/K006-蜂巢式置信度与证据收敛.md)
+- [蜜蜂选巢读书笔记](3-processing/wiki/_indexes/BOOK-001-达尔文投资知识-蜜蜂选巢笔记.md)
+- [评分规范](3-processing/governance/CONFIDENCE_SCORING.md)
+
+首批已纳入 25 条跨类型来源与 4 条核心 Claim 进行 AI 初评。核心 B 级 Claim 必须由 Joe 复核后，才能作为新的正式发布门槛；同源转载、摘要和改写只计算为一个证据谱系。
 
 ---
 

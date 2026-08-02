@@ -28,20 +28,30 @@
 - [K003：应用成熟度 L0-L4](concepts/K003-应用成熟度L0-L4.md)
 - [K004：AI 治理控制环](concepts/K004-AI治理控制环.md)
 - [K005：Agent 自治与责任矩阵](concepts/K005-Agent自治与责任矩阵.md)
+- [K006：蜂巢式置信度与证据收敛](concepts/K006-蜂巢式置信度与证据收敛.md)
+
+## 外部研究资料
+
+- [外部研究资料索引](_indexes/EXTERNAL-RESEARCH-SOURCES.md)：FDE 白皮书、赫拉利达沃斯治理表达等非 WAIC 输入的来源卡、评分与使用边界
+- [SRC-Q003-18：飞书社区 FDE 人才白皮书](_indexes/SRC-Q003-18-飞书社区FDE人才白皮书-解读与蜂巢评分.md)：已完成全文、表格和图片核读；SQS C / 64
 
 ## 发布与主库接入
 
 - [REL001：WAIC 战略研究报告发布映射](releases/REL001-WAIC战略研究报告发布映射.md)
 - [REL002：FDE 行业报告发布映射](releases/REL002-FDE行业报告发布映射.md)
+- [REL003：蜂巢式知识置信度评分系统发布映射](releases/REL003-蜂巢式知识置信度评分系统发布映射.md)
 - [主知识库接入说明](../governance/MAIN_KB_INTEGRATION.md)：已注册为 `waic-research`，每日 23:38 自检
 
 ## 工作入口
 
 - [Wiki schema v0.2](_schema/SCHEMA.md)：对象、证据和 release 映射规则
 - [Governance v1.1](../governance/README.md)：规模化注册、摄取、lint 与发布规范
+- [蜂巢式置信度评分](../governance/CONFIDENCE_SCORING.md)：来源 SQS、Claim CCS、谱系去重与复审规则
+- [蜜蜂选巢读书笔记](_indexes/BOOK-001-达尔文投资知识-蜜蜂选巢笔记.md)：评分体系的机制来源与边界
 - `../index/waic-kb-pull-index.md`：现有来源明细
 - `../../1-raw/`：Get笔记原始来源，只读
 - `../../2-data/`：人工整理与完整逐字稿等补充来源
+- `../../2-data/外部研究资料/`：非 WAIC 的外部研究输入、来源卡与评分边界
 
 ## 当前边界
 

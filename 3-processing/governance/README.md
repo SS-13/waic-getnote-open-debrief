@@ -1,4 +1,4 @@
-# WAIC LLM Wiki Governance v1.1
+# WAIC LLM Wiki Governance v1.2
 
 > 治理的目标不是把资料做成更大的目录，而是让每一条可复用知识都能说明：它来自哪里、适用于何时、证据强度如何、与什么冲突、何时需要重审。
 
@@ -7,6 +7,8 @@
 - `1-raw/`：Get笔记原始记录，保持只读。
 - `2-data/`：人工整理与完整逐字稿等补充证据，保持只读。
 - `3-processing/index/source-registry.jsonl`：当前来源库存的派生注册表。
+- `3-processing/index/source-assessments.jsonl`：来源可靠度 SQS 的独立审计账本，不被注册表重建覆盖。
+- `3-processing/index/claim-confidence.jsonl`：Claim 结论置信度 CCS 的独立审计账本。
 - `3-processing/wiki/`：经问题驱动摄取后的 question、claim、tension、synthesis、concept 与 release。
 - `4-outputs/`：对外产出，只能引用 Wiki 或证据层，不能反向充当事实来源；由 release 记录映射。
 
@@ -36,6 +38,7 @@
 ## 文档
 
 - [来源注册表 schema](SOURCE_REGISTRY_SCHEMA.md)
+- [蜂巢式置信度评分](CONFIDENCE_SCORING.md)
 - [摄取协议](INGESTION_PROTOCOL.md)
 - [Lint 与发布门禁](LINT_AND_RELEASE.md)
 - [运营节奏](OPERATING_CADENCE.md)

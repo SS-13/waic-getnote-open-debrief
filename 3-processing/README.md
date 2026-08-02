@@ -29,12 +29,19 @@
 - `2026/` 保留已有的二阶加工结果。
 - `wiki/` 回答“这些资料共同说明了什么”，并用 `release` 记录知识对象与交付物的映射。
 - `4-outputs/` 是发布层，不作为 Wiki 的一手证据；输出变更必须回到 claim/synthesis 更新。
+- `../2-data/外部研究资料/` 保存非 WAIC 的外部输入来源卡；它们按独立谱系评分，不能混写为 WAIC 原始证据。
+
+## 置信度治理
+
+来源库存与人工评分分离：`index/source-registry.jsonl` 是可重建清单，`index/source-assessments.jsonl` 和 `index/claim-confidence.jsonl` 保存 SQS、CCS、证据谱系、复审与 Joe 复核状态。详见 [蜂巢式置信度评分](governance/CONFIDENCE_SCORING.md)。
 
 ## 当前入口
 
 - [WAIC LLM Wiki](wiki/HOME.md)
-- [Governance v1.1](governance/README.md)
-- [Wiki schema v0.2](wiki/_schema/SCHEMA.md)
+- [Governance v1.2](governance/README.md)
+- [Wiki schema v0.3](wiki/_schema/SCHEMA.md)
+- [K006：蜂巢式置信度与证据收敛](wiki/concepts/K006-蜂巢式置信度与证据收敛.md)
+- [REL003：蜂巢式知识置信度评分系统发布映射](wiki/releases/REL003-蜂巢式知识置信度评分系统发布映射.md)
 - [Q001：历年 WAIC 的变化，普通人能看到什么？](wiki/questions/Q001-历年WAIC的变化，普通人能看到什么.md)
 - [SYN001：2018–2026 WAIC 变化的普通人视角](wiki/syntheses/SYN001-2018至2026-WAIC变化的普通人视角.md)
 - [Q002：AI 责任半径扩大后，应用、岗位与治理如何联动？](wiki/questions/Q002-AI责任半径扩大后，应用、岗位与治理如何联动.md)
@@ -44,4 +51,5 @@
 - [SYN003：FDE 中美企业 AI 部署与治理产业研判](wiki/syntheses/SYN003-FDE中美企业AI部署与治理产业研判.md)
 - [K005：Agent 自治与责任矩阵](wiki/concepts/K005-Agent自治与责任矩阵.md)
 - [REL002：FDE 行业报告发布映射](wiki/releases/REL002-FDE行业报告发布映射.md)
+- [外部研究资料索引](wiki/_indexes/EXTERNAL-RESEARCH-SOURCES.md)
 - [主知识库接入说明](governance/MAIN_KB_INTEGRATION.md)

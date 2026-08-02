@@ -10,8 +10,10 @@
 | 相反主张未登记 tension、synthesis 过期 | 语义 lint | 标记待审，不自动改写。 |
 | 输出结论无 claim 或 source 支撑 | 发布 lint | 阻止进入 `4-outputs/`。 |
 | release 缺 synthesis 或交付路径 | 发布 lint | 阻止登记为正式发布。 |
+| 评分账本无效来源、分数不一致或 Claim 谱系重复 | 结构 lint | 阻止评分记录进入治理账本。 |
+| A/B、核心或发布级 Claim 未经 Joe 复核 | 评分 lint | 保留为显式告警，不得作为新的正式发布门槛。 |
 
-当前可执行的基础检查由 `lint-knowledge-base.mjs` 生成 `3-processing/index/governance-lint-report.json`：注册表字段、来源路径、注册表快照、Wiki ID、必填 frontmatter、对象引用、内部链接与 release 输出路径。语义 lint 仍要求结合问题语境进行审查。
+当前可执行的基础检查由 `lint-knowledge-base.mjs` 生成 `3-processing/index/governance-lint-report.json`：注册表字段、来源路径、注册表快照、Wiki ID、必填 frontmatter、对象引用、内部链接、release 输出路径，以及 SQS/CCS 账本的来源引用、分数、等级、谱系和复核状态。语义 lint 仍要求结合问题语境进行审查。
 
 ## 发布门禁
 

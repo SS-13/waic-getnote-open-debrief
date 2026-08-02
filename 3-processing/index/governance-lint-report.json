@@ -1,14 +1,46 @@
 {
-  "generatedAt": "2026-07-22T09:28:18.916Z",
+  "generatedAt": "2026-08-02T04:10:32.621Z",
   "passed": true,
   "checks": {
     "registryRecords": 860,
     "uniqueSourceIds": 860,
     "duplicateCanonicalSourceIds": 13,
-    "wikiPages": 35,
-    "wikiIds": 33,
-    "checkedLinks": 156
+    "wikiPages": 41,
+    "wikiIds": 39,
+    "checkedLinks": 182,
+    "sourceAliases": 54,
+    "sourceAssessments": 27,
+    "claimConfidence": 5
   },
   "errors": [],
-  "warnings": []
+  "warnings": [
+    {
+      "kind": "unconfirmed-high-impact-claim",
+      "confidenceId": "CC-001",
+      "claimId": "C008",
+      "confidenceBand": "B",
+      "claimImpact": "core"
+    },
+    {
+      "kind": "unconfirmed-high-impact-claim",
+      "confidenceId": "CC-002",
+      "claimId": "C009",
+      "confidenceBand": "B",
+      "claimImpact": "core"
+    },
+    {
+      "kind": "unconfirmed-high-impact-claim",
+      "confidenceId": "CC-003",
+      "claimId": "C010",
+      "confidenceBand": "B",
+      "claimImpact": "core"
+    },
+    {
+      "kind": "unconfirmed-high-impact-claim",
+      "confidenceId": "CC-004",
+      "claimId": "C014",
+      "confidenceBand": "B",
+      "claimImpact": "core"
+    }
+  ]
 }
