@@ -1,7 +1,8 @@
 # 📚 1-raw/ 内部索引
 
-> 来源 KB：**2026 WAIC 知识库**（topic `JawjeBlY`）
-> 索引更新时间：2026-07-22 12:11:22
+> 历史来源：**2026 WAIC 知识库**（topic `JawjeBlY`）
+> 当前增量入口：得到大脑 **ai 资讯**（topic `JVl2k6DY`）中的 Joe 主动保存普通笔记
+> 索引截面：2026-08-03；篇数只统计证据 Markdown，不含 `README.md`、`INDEX.md`
 
 ## 目录与篇数
 
@@ -11,6 +12,7 @@
 | `WAIC-2026当届/论坛演讲实录/` | 272 | 2026 论坛嘉宾演讲、致辞、圆桌 |
 | `WAIC-2026当届/资讯与链接/` | 69 | 2026 官方资讯 / 报道 / 链接 |
 | `专题研究/` | 9 | 跨年 AI 治理 / 研究类深度文章 |
+| `Joe主动收录/AI资讯/` | 7 | `JVl2k6DY` 普通笔记：历史基线 5 + 基线后新增 2；非订阅博主或直播 |
 | `往年届次/WAIC-2018/` | 31 | 2018 WAIC 资料存档 |
 | `往年届次/WAIC-2019/` | 53 | 2019 WAIC 资料存档 |
 | `往年届次/WAIC-2020/` | 44 | 2020 WAIC 资料存档 |
@@ -19,10 +21,14 @@
 | `往年届次/WAIC-2023/` | 55 | 2023 WAIC 资料存档 |
 | `往年届次/WAIC-2024/` | 37 | 2024 WAIC 资料存档 |
 | `往年届次/WAIC-2025/` | 172 | 2025 WAIC 资料存档 |
-| **合计** | **836** | |
+| **合计** | **843** | 旧 WAIC 证据 836 + Joe 主动收录普通笔记 7 |
 
 ## 维护机制
 
-- **去重唯一键**：每篇 frontmatter 的 `note_id`
-- **每日增量**：`python scripts/daily_sync.py`（或挂 cron，详见 `scripts/daily_sync.py` 顶部说明）
-- **外部索引**：`3-processing/index/waic-kb-pull-index.md` 833 条全量清单（按目录分组）
+- **历史只读契约**：既有 Raw 不修改；同一笔记修订时新增版本文件，不覆盖旧版。
+- **当前输入白名单**：只接受 `JVl2k6DY` 中 Joe 主动保存的普通笔记；订阅博主、订阅内容和直播不登记、不抓取、不评分。
+- **身份与版本**：`note_id` 按字符串保存并标识 canonical source；具体版本以 `note_id + versionHash` 去重。
+- **当前连接器**：`python3 automation/sync_getnote_intake.py --dry-run` 只查看差集；正式发布由独立 worktree 中的 `publish_daily_sync.py` 完成。
+- **自动化状态**：Codex 每日 09:07 运行唯一摄取任务；零变化不创建 commit，远端分叉立即停止。
+- **历史清单**：`3-processing/index/waic-kb-pull-index.md` 的 833 条记录是较早快照，不代表当前 843 份 Raw 证据库存。
+- **Registry 状态**：已于 2026-08-03 重建为 870 条（raw 843、data 27）；真实 API 二次运行返回 `zero-change`。

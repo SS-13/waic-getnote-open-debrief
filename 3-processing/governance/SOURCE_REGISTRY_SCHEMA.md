@@ -1,14 +1,16 @@
-# Source Registry Schema v1.0
+# Source Registry Record v1.0 · Snapshot v1.1
 
 ## 目的
 
 `3-processing/index/source-registry.jsonl` 是可重建的来源清单。它只读取证据层元数据和文件内容指纹，不保存正文副本，不修改来源文件。
 
+`README.md` 与 `INDEX.md` 是导航或维护文件，不属于证据，生成器在 `1-raw/` 和 `2-data/` 中统一排除。
+
 ## 主键与去重
 
 | 字段 | 规则 |
 |---|---|
-| `sourceId` | 本地文件记录身份：`raw:<noteId>`、`data:<noteId>` 或文件内容 SHA-256 指纹。 |
+| `sourceId` | 本地文件记录身份：旧资料使用 `raw:<noteId>`、`data:<noteId>`；版本化接入可由 frontmatter 提供稳定的 `registry_source_id`。 |
 | `canonicalSourceId` | 底层来源身份：有 `noteId` 时为 `note:<noteId>`；用于发现跨层副本。 |
 | `noteId` | Get笔记的唯一键；允许为空。 |
 | `contentHash` | 文件全文 SHA-256，用于发现同一路径内容更新。 |
@@ -32,7 +34,7 @@
 | `contentHash` | 全文指纹。 |
 | `reviewStatus` | `registered`、`triaged`、`integrated`、`superseded`、`excluded`。 |
 | `duplicateOf` | 已确认重复时的 `sourceId`；默认 `null`。 |
-| `registeredAt` | 本次注册表生成时间。 |
+| `registeredAt` | 该文件首次进入注册表的时间；后续重建必须保留，不能替换为本次运行时间。 |
 
 ## 时间语义
 
@@ -56,4 +58,6 @@
 
 ## 注册表生成与审查
 
-生成器负责机械字段，不负责语义判断。`fidelity`、`reviewStatus`、`duplicateOf` 的非默认升级必须经人工或带证据的 Agent 审查，并留下 Wiki 或治理记录。
+生成器负责机械字段，不负责语义判断。输入未变化时，注册表与快照必须逐字节不变。来源处理状态、谱系关系与版本替代由独立治理账本保存；`fidelity`、`reviewStatus`、`duplicateOf` 的非默认升级必须经人工或带证据的 Agent 审查，并留下 Wiki 或治理记录。
+
+Snapshot v1.1 额外保存 registry 全文哈希、Raw/Data 分层计数、保真度计数、唯一 `noteId` 数和重复 canonical source 列表。生成器在 registry 未变但 snapshot 缺失或陈旧时只修复 snapshot；相同输入不会刷新 `generatedAt`。

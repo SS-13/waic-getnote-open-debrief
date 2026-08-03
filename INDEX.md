@@ -1,20 +1,21 @@
 # 📇 项目总索引 · WAIC 2026 开放解读档案
 
 > 数据流水线：**1-raw → 2-data → 3-processing → 4-outputs**
-> 来源知识库：**2026 WAIC 世界人工智能大会知识库**（Get笔记 topic `JawjeBlY`）· 更新日期 2026-07-21
+> 历史来源：**2026 WAIC 世界人工智能大会知识库**（Get笔记 topic `JawjeBlY`）
+> 当前增量入口：得到大脑 **ai 资讯**（topic `JVl2k6DY`）中的 Joe 主动保存普通笔记 · 索引截面 2026-08-03
 
 ## 四层结构总览
 
 | 层 | 目录 | 语义 | 篇数 | 关键索引 |
 |---|---|---|---:|---|
-| 1 | `1-raw/` | 得到笔记原始信息（getnote 拉取，含 note_id） | 836 | [内部索引](1-raw/INDEX.md) |
-| 2 | `2-data/` | 我之前手工整理的信息（完整逐字稿 / 人工分组） | 25 | 见下方分组 |
+| 1 | `1-raw/` | 得到笔记原始信息（getnote 拉取，含 note_id） | 843 | [内部索引](1-raw/INDEX.md) |
+| 2 | `2-data/` | 手工整理、完整逐字稿与外部研究来源卡 | 27 | 见下方分组 |
 | 3 | `3-processing/` | MECE 文档、索引与以问题为入口的语义 Wiki | 持续演进 | [Wiki 入口](3-processing/wiki/HOME.md) |
 | 4 | `4-outputs/` | 产出物（卡片图 / 看板 / PDF 合集） | — | 图片+PDF |
 
 ## 1-raw/ — getnote 原始档案（按 WAIC 届次 + 2026 内容型）
 
-当前本地共有 **836** 篇带 `note_id` 的笔记。`1-raw/INDEX.md` 是最新目录计数；逐条拉取索引仍是 833 条 KB 记录的较早快照。
+当前本地共有 **843** 份 Raw 证据 Markdown：旧 WAIC 证据 836 份，Joe 主动收录普通笔记 7 份，其中历史基线 5 份、基线后新增 2 份。计数不含 `README.md`、`INDEX.md`；逐条拉取索引仍是 833 条 KB 记录的较早快照。
 
 | 目录 | 篇数 |
 |---|---:|
@@ -22,6 +23,7 @@
 | `WAIC-2026当届/论坛演讲实录/` | 272 |
 | `WAIC-2026当届/资讯与链接/` | 69 |
 | `专题研究/` | 9 |
+| `Joe主动收录/AI资讯/` | 7 |
 | `往年届次/WAIC-2018/` | 31 |
 | `往年届次/WAIC-2019/` | 53 |
 | `往年届次/WAIC-2020/` | 44 |
@@ -40,6 +42,8 @@
 | `用户分享/` | 2 | 得到大脑用户分享的论坛讨论全文 |
 | `直播分享/` | 7 | 论坛/发布会完整逐字稿（4万–11万字，远比摘要丰富） |
 | `高质量论坛-清华治理/` | 10 | 清华·全球AI治理路径论坛系列 |
+| `外部研究资料/` | 2 | 非 WAIC 的外部输入来源卡，按独立谱系登记与评分 |
+| **合计** | **27** | 只统计证据 Markdown，不含说明与索引文件 |
 
 ## 3-processing/wiki/ — 持久语义知识层
 
@@ -48,8 +52,10 @@ Wiki 不按文章数量扩张，而是围绕用户问题摄取来源，积累可
 - [Wiki 主入口](3-processing/wiki/HOME.md)
 - [Q001：历年 WAIC 的变化，普通人能看到什么？](3-processing/wiki/questions/Q001-历年WAIC的变化，普通人能看到什么.md)
 
-## 去重与增量拉取机制
+## 去重、接入与 Registry 状态
 
-- **唯一键**：`1-raw` 每篇 frontmatter 的 `note_id` 与 KB 对齐。
-- **拉取前 check**：新增拉取前，用 `note_id` 与本地求差集，只拉新增，绝不重复。
-- **当前状态**：本地 raw 为 835 条；`3-processing/index/waic-kb-pull-index.md` 仍是 833 条 KB 记录的旧快照，后续应单独刷新明细索引。
+- **当前白名单**：自动入口只接受 `JVl2k6DY` 中 Joe 主动保存的普通笔记；订阅博主、订阅内容和直播被排除。
+- **身份与版本**：`note_id` 按字符串保存并标识 canonical source；以 `note_id + versionHash` 识别具体版本，Raw 历史不覆盖。
+- **每日事务**：Codex 独立 worktree 每日 09:07 运行 `python3 automation/publish_daily_sync.py`；只提交白名单路径。
+- **Registry 状态**：`source-registry.snapshot.json` 已于 2026-08-03 重建为 870 条（raw 843、data 27、unique note IDs 843）。
+- **基线与幂等**：write-once marker 冻结 5 条历史基线，此后 2 条按 `new-source` 接入；真实 API 第二次运行返回 `zero-change`，全部受管文件 SHA-256 保持不变。

@@ -1,23 +1,27 @@
 import { createHash } from "node:crypto";
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
-const repoRoot = path.resolve(scriptDir, "../..");
-const registryPath = path.join(repoRoot, "3-processing/index/source-registry.jsonl");
-const snapshotPath = path.join(repoRoot, "3-processing/index/source-registry.snapshot.json");
+const DEFAULT_REPO_ROOT = path.resolve(scriptDir, "../..");
 
 const SOURCE_ROOTS = [
   { directory: "1-raw", sourceLayer: "raw" },
   { directory: "2-data", sourceLayer: "data" },
 ];
 
+const NON_EVIDENCE_FILENAMES = new Set(["README.md", "INDEX.md"]);
+
+function compareCodePoints(left, right) {
+  return left < right ? -1 : left > right ? 1 : 0;
+}
+
 async function walkMarkdownFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const paths = [];
 
-  for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
+  for (const entry of entries.sort((a, b) => compareCodePoints(a.name, b.name))) {
     const entryPath = path.join(directory, entry.name);
 
     if (entry.isDirectory()) {
@@ -68,6 +72,10 @@ function inferEventYear(relativePath, title) {
 }
 
 function inferFidelity(metadata, sourceLayer) {
+  if (["verbatim", "structured", "summary", "pointer", "unknown"].includes(metadata.fidelity)) {
+    return metadata.fidelity;
+  }
+
   if (metadata.content_source === "manual-transcript") {
     return "verbatim";
   }
@@ -87,18 +95,56 @@ function hashContent(content) {
   return createHash("sha256").update(content).digest("hex");
 }
 
-async function buildRegistry() {
+async function readOptionalFile(targetPath) {
+  try {
+    return await readFile(targetPath, "utf8");
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return null;
+    }
+    throw error;
+  }
+}
+
+function parseJsonl(content) {
+  return (content || "").trim().split("\n").filter(Boolean).map((line) => JSON.parse(line));
+}
+
+async function atomicWrite(targetPath, content) {
+  const tempPath = `${targetPath}.tmp-${process.pid}`;
+  await writeFile(tempPath, content);
+  await rename(tempPath, targetPath);
+}
+
+function snapshotCore(snapshot) {
+  if (!snapshot) {
+    return null;
+  }
+
+  const { generatedAt: _generatedAt, ...core } = snapshot;
+  return core;
+}
+
+export async function buildRegistry({
+  repoRoot = DEFAULT_REPO_ROOT,
+  generatedAt = process.env.WORKBENCH_NOW || new Date().toISOString(),
+} = {}) {
+  const resolvedRepoRoot = path.resolve(repoRoot);
+  const registryPath = path.join(resolvedRepoRoot, "3-processing/index/source-registry.jsonl");
+  const snapshotPath = path.join(resolvedRepoRoot, "3-processing/index/source-registry.snapshot.json");
   const records = [];
-  const generatedAt = new Date().toISOString();
+  const previousRegistryContent = await readOptionalFile(registryPath);
+  const existingRecords = parseJsonl(previousRegistryContent);
+  const existingByPath = new Map(existingRecords.map((record) => [record.relativePath, record]));
 
   for (const sourceRoot of SOURCE_ROOTS) {
-    const directory = path.join(repoRoot, sourceRoot.directory);
+    const directory = path.join(resolvedRepoRoot, sourceRoot.directory);
     const paths = await walkMarkdownFiles(directory);
 
     for (const sourcePath of paths) {
-      const relativePath = path.relative(repoRoot, sourcePath);
+      const relativePath = path.relative(resolvedRepoRoot, sourcePath).split(path.sep).join("/");
 
-      if (relativePath === "1-raw/README.md" || relativePath === "1-raw/INDEX.md") {
+      if (NON_EVIDENCE_FILENAMES.has(path.basename(sourcePath))) {
         continue;
       }
 
@@ -107,10 +153,11 @@ async function buildRegistry() {
       const contentHash = hashContent(content);
       const noteId = metadata.note_id || null;
 
-      const canonicalSourceId = noteId ? `note:${noteId}` : null;
-      const sourceId = noteId
-        ? `${sourceRoot.sourceLayer}:${noteId}`
-        : `file:${contentHash}`;
+      const canonicalSourceId = metadata.canonical_source_id || (noteId ? `note:${noteId}` : null);
+      const sourceId = metadata.registry_source_id || (
+        noteId ? `${sourceRoot.sourceLayer}:${noteId}` : `file:${contentHash}`
+      );
+      const existingRecord = existingByPath.get(relativePath);
 
       records.push({
         schemaVersion: "1.0",
@@ -128,14 +175,19 @@ async function buildRegistry() {
         contentSource: metadata.content_source || null,
         fidelity: inferFidelity(metadata, sourceRoot.sourceLayer),
         contentHash,
-        reviewStatus: "registered",
-        duplicateOf: null,
-        registeredAt: generatedAt,
+        reviewStatus: existingRecord?.reviewStatus || "registered",
+        duplicateOf: existingRecord?.duplicateOf || null,
+        registeredAt: existingRecord?.registeredAt
+          || metadata.ingested_at
+          || metadata.captured_at
+          || metadata.published_at
+          || metadata.date
+          || "unknown",
       });
     }
   }
 
-  records.sort((a, b) => a.relativePath.localeCompare(b.relativePath));
+  records.sort((a, b) => compareCodePoints(a.relativePath, b.relativePath));
 
   const sourceIds = new Set();
   const noteIds = new Set();
@@ -151,6 +203,9 @@ async function buildRegistry() {
 
     if (record.noteId) {
       noteIds.add(record.noteId);
+    }
+
+    if (record.canonicalSourceId) {
       canonicalSourceIds.set(
         record.canonicalSourceId,
         (canonicalSourceIds.get(record.canonicalSourceId) || 0) + 1,
@@ -166,19 +221,20 @@ async function buildRegistry() {
   const byFidelity = {};
   const duplicateCanonicalSourceIds = [...canonicalSourceIds.entries()]
     .filter(([, count]) => count > 1)
-    .map(([sourceId]) => sourceId);
+    .map(([sourceId]) => sourceId)
+    .sort(compareCodePoints);
 
   for (const record of records) {
     byLayer[record.sourceLayer] += 1;
     byFidelity[record.fidelity] = (byFidelity[record.fidelity] || 0) + 1;
   }
 
-  await mkdir(path.dirname(registryPath), { recursive: true });
-  await writeFile(registryPath, `${records.map((record) => JSON.stringify(record)).join("\n")}\n`);
-  await writeFile(snapshotPath, `${JSON.stringify({
-    schemaVersion: "1.0",
-    generatedAt,
+  const registryContent = `${records.map((record) => JSON.stringify(record)).join("\n")}\n`;
+  const registryHash = hashContent(registryContent);
+  const expectedSnapshotCore = {
+    schemaVersion: "1.1",
     registryPath: "3-processing/index/source-registry.jsonl",
+    registryHash,
     recordCount: records.length,
     uniqueSourceIds: sourceIds.size,
     uniqueNoteIds: noteIds.size,
@@ -187,19 +243,80 @@ async function buildRegistry() {
     duplicateSourceIds,
     duplicateCanonicalSourceIds,
     sourceRoots: SOURCE_ROOTS.map(({ directory }) => directory),
-    note: "Generated from source frontmatter and content hashes. Semantic lineage and review status require later review.",
+    note: "Generated deterministically from source frontmatter and content hashes. Semantic lineage lives in separate governance ledgers.",
+  };
+  const previousSnapshotContent = await readOptionalFile(snapshotPath);
+  const previousSnapshot = previousSnapshotContent ? JSON.parse(previousSnapshotContent) : null;
+  const registryChanged = registryContent !== (previousRegistryContent || "");
+  const snapshotChanged = JSON.stringify(snapshotCore(previousSnapshot)) !== JSON.stringify(expectedSnapshotCore);
+
+  if (!registryChanged && !snapshotChanged) {
+    return {
+      changed: false,
+      registryChanged: false,
+      snapshotChanged: false,
+      registryHash,
+      recordCount: records.length,
+      uniqueNoteIds: noteIds.size,
+      duplicateCanonicalSourceIds: duplicateCanonicalSourceIds.length,
+      byLayer,
+      byFidelity,
+    };
+  }
+
+  await mkdir(path.dirname(registryPath), { recursive: true });
+  if (registryChanged) {
+    await atomicWrite(registryPath, registryContent);
+  }
+  await atomicWrite(snapshotPath, `${JSON.stringify({
+    generatedAt,
+    ...expectedSnapshotCore,
   }, null, 2)}\n`);
 
-  console.log(JSON.stringify({
+  return {
+    changed: true,
+    registryChanged,
+    snapshotChanged,
+    registryHash,
     recordCount: records.length,
     uniqueNoteIds: noteIds.size,
     duplicateCanonicalSourceIds: duplicateCanonicalSourceIds.length,
     byLayer,
     byFidelity,
-  }, null, 2));
+  };
 }
 
-buildRegistry().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+function parseArgs(argv) {
+  const options = {
+    repoRoot: DEFAULT_REPO_ROOT,
+    generatedAt: process.env.WORKBENCH_NOW || new Date().toISOString(),
+  };
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const argument = argv[index];
+    if (argument === "--repo-root") {
+      options.repoRoot = argv[++index];
+    } else if (argument === "--generated-at") {
+      options.generatedAt = argv[++index];
+    } else {
+      throw new Error(`Unknown argument: ${argument}`);
+    }
+  }
+
+  if (!options.repoRoot || !options.generatedAt) {
+    throw new Error("--repo-root and --generated-at require values");
+  }
+  return options;
+}
+
+async function main() {
+  const result = await buildRegistry(parseArgs(process.argv.slice(2)));
+  console.log(JSON.stringify(result, null, 2));
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

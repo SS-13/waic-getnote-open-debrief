@@ -2,6 +2,10 @@
 id: C010
 type: claim
 status: reviewed
+review_status: joe-reviewed
+reviewed_by: Joe
+reviewed_at: 2026-08-03
+review_decision: confirmed
 question_ids: [Q003]
 source_ids: [SRC-Q003-10, SRC-Q003-11, SRC-Q003-12]
 scope: OpenAI-and-Palantir-role-definitions-as-of-2026-07-22
@@ -22,4 +26,8 @@ as_of: 2026-07-22
 
 ## Boundary
 
-这是三家公司的岗位设计，而不是 FDE 职业的唯一标准，也不能据此推算所有公司都采用同样组织形式。
+这是两家公司三个公开岗位页面呈现的角色设计，而不是 FDE 职业的唯一标准，也不能据此推算所有公司都采用同样组织形式。
+
+## Joe Review
+
+Joe 于 2026-08-03 确认本 Claim 及上述边界。结论只覆盖 OpenAI 与 Palantir 当前公开的三个岗位页面，不外推为行业统一标准。

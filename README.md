@@ -3,6 +3,21 @@
 > **WAIC 2018–2026 的原始资料、二阶解读与问题驱动 Wiki**
 > 整理：Joe · 这是个人 AI 总知识库中的 WAIC 专题研究子系统。
 
+## Research Desk
+
+日常阅读从这里开始：
+
+- [进入研究工作台：当前判断、主题与任务入口](3-processing/wiki/HOME.md)
+- [看最近发生了什么](3-processing/wiki/NOW.md)
+- [按主题理解](3-processing/wiki/topics/README.md)
+- [查看来源与评分边界](3-processing/wiki/sources/README.md)
+- [处理待 Joe 复核事项](3-processing/wiki/reviews/README.md)
+- [生成或回看简报](3-processing/wiki/briefings/README.md)
+
+> 新的 Get笔记输入只接受 Joe 自建知识库 `JVl2k6DY` 中主动保存的普通笔记。订阅博主、订阅内容和直播不导入、不登记、不评分；Joe 主动保存也只提高处理优先级，不提高 SQS 或 CCS。
+>
+> Phase 2 已冻结 5 条普通笔记的历史基线，并接入此后 2 条真实新增；当前 7 条普通笔记中 6 条为 `pending`、1 条为 `routed`。每日 09:07 的独立 worktree 事务在零变化时不改知识文件、不创建 commit；评分与 Claim 交叉验证留给 Phase 3。
+
 ---
 
 ## 📌 这是什么
@@ -11,7 +26,7 @@
 
 项目从 2026 WAIC 下午流水席 37 场嘉宾访谈的二阶解读起步，目前已经扩展为 2018–2026 WAIC 资料池，并增加了以真实问题为入口的 LLM Wiki。原始资料负责保真，Wiki 负责积累可追溯的主张、冲突和跨来源判断。
 
-AI 总知识库的总入口、课程、项目能力和个人决策维护在 Joseph's Garden；本仓库只负责 WAIC 的证据与研究链。完整边界与接入方法见 [AI 总知识库架构](3-processing/governance/AI_TOTAL_KB_ARCHITECTURE.md)。
+AI 总知识库的总入口、课程、项目能力和个人决策维护在 Joseph's Garden；本仓库以 WAIC 为核心证据池，只接入被活跃研究问题实际使用的外部佐证。完整边界与接入方法见 [AI 总知识库架构](3-processing/governance/AI_TOTAL_KB_ARCHITECTURE.md)。
 
 ---
 
@@ -60,7 +75,7 @@ FDE（Forward Deployed Engineer）研究把企业 AI 的问题从“如何做一
 - [蜜蜂选巢读书笔记](3-processing/wiki/_indexes/BOOK-001-达尔文投资知识-蜜蜂选巢笔记.md)
 - [评分规范](3-processing/governance/CONFIDENCE_SCORING.md)
 
-首批已纳入 25 条跨类型来源与 4 条核心 Claim 进行 AI 初评。核心 B 级 Claim 必须由 Joe 复核后，才能作为新的正式发布门槛；同源转载、摘要和改写只计算为一个证据谱系。
+当前已纳入 28 条跨类型来源与 5 条 Claim：C008、C009、C010、C014 四条核心 B 级 Claim 已于 2026-08-03 由 Joe 确认，C015 仍为 C 级支持性假设。确认不改变原始分数；同源转载、摘要和改写仍只计算为一个证据谱系。
 
 ---
 
@@ -138,18 +153,12 @@ WAIC 是中国 AI 行业一年一度的风向标——这种规模的现场访�
 
 > 📦 `scripts/`（复现工具）和 `templates/`（HTML 模板）在仓库里但**不主动展示**——它们是 Joe 自己复现用的，不是给你用的。
 
-## 🔄 每日增量拉取（自动同步 KB → 1-raw）
+## 新资料接入边界
 
-KB 在持续更新。每天跑一次同步脚本,只拉**新增**的笔记,绝不重复:
+- 既有 `1-raw/` 保留为 WAIC 历史证据，不因新入口切换而覆盖或重排。
+- 新的自动入口白名单是 Get笔记自建知识库 `JVl2k6DY`，只接受普通笔记。
+- 订阅博主、订阅内容和直播在登记前排除，不进入 raw、来源库存、评分账本或简报候选。
+- 零新增是正常状态：不生成空简报，也不应制造无意义的 Git 提交。
+- 最近有效变化、来源状态和待复核项统一从 [Research Desk](3-processing/wiki/HOME.md) 查看。
 
-```bash
-python scripts/daily_sync.py            # 实拉
-python scripts/daily_sync.py --dry-run  # 只看差集
-```
-
-- **去重** = `note_id`（`1-raw` 每篇 frontmatter 都有）
-- **每日 09:07 定时**：`7 9 * * * cd <repo> && python scripts/daily_sync.py >> .sync.log 2>&1`
-- 脚本自动分类（2026 当届/往年届次/专题研究）、写 frontmatter、重建 `1-raw/INDEX.md`
-- 无新增时为 no-op,放心挂 cron
-
-详细说明见 [`agents.md`](./agents.md)。
+V2 的完整输入、浏览、简报与 Agent 圆桌约束见 [Research Workbench v2 计划](plans/knowledge-workbench-v2.md)。仓库维护边界见 [`agents.md`](./agents.md)。

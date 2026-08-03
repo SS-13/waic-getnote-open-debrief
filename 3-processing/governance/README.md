@@ -7,6 +7,9 @@
 - `1-raw/`：Get笔记原始记录，保持只读。
 - `2-data/`：人工整理与完整逐字稿等补充证据，保持只读。
 - `3-processing/index/source-registry.jsonl`：当前来源库存的派生注册表。
+- `3-processing/index/intake-baseline.json`：Getnote 普通笔记首次完整扫描的 write-once 完成凭证，保存排序 ID、数量与哈希。
+- `3-processing/index/intake-ledger.jsonl`：Getnote 普通笔记的版本、canonical source、分流状态与批次归属。
+- `3-processing/index/intake-batches.jsonl`：只记录有实质变化的成功批次；零变化与失败只进入被 Git 忽略的运行状态。
 - `3-processing/index/source-assessments.jsonl`：来源可靠度 SQS 的独立审计账本，不被注册表重建覆盖。
 - `3-processing/index/claim-confidence.jsonl`：Claim 结论置信度 CCS 的独立审计账本。
 - `3-processing/wiki/`：经问题驱动摄取后的 question、claim、tension、synthesis、concept 与 release。
@@ -24,6 +27,8 @@
 ## 发布对象链
 
 `source → claim → tension/synthesis → concept → release → Markdown/PDF/PPT/figures`
+
+机械接入先经过 `Getnote → immutable Raw version → intake ledger/batch → registry → NOW/lint`。新资料初始为 `pending`，可以保留 Topic/Question 候选，但在完成来源评估前不进入语义对象链。
 
 其中 `concept` 是跨问题复用的分析框架，`release` 是发布登记而不是新证据。输出层发现错误时，必须沿链回到最早受影响的知识对象修订。
 

@@ -46,6 +46,7 @@ desktop.ini
 *.log
 logs/
 .cache/
+automation/.state/
 
 # ============ Build artifacts ============
 dist/

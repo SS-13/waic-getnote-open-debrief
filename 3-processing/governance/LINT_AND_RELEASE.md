@@ -5,6 +5,9 @@
 | 检查 | 类型 | 失败后的动作 |
 |---|---|---|
 | 重复 `sourceId`、缺字段、路径失效、指纹变化 | 结构 lint | 阻止摄取或发布。 |
+| baseline marker 的 ID 类型、唯一性、数量、哈希或 ledger 对照无效 | 事务 lint | 阻止自动提交与推送。 |
+| intake/Raw/registry 身份不一致、批次断链或计数不守恒 | 事务 lint | 阻止自动提交与推送。 |
+| `routed`/`integrated` 来源缺少 SQS；`pending` 未评分 | 分流 lint | 前者阻止发布；后者允许留在观察池。 |
 | claim 无来源定位、日期偷换、引用不存在 | 结构 lint | 阻止发布。 |
 | 把摘要写成逐字引文、同源证据重复计数 | 语义 lint | 退回修订。 |
 | 相反主张未登记 tension、synthesis 过期 | 语义 lint | 标记待审，不自动改写。 |
@@ -13,7 +16,7 @@
 | 评分账本无效来源、分数不一致或 Claim 谱系重复 | 结构 lint | 阻止评分记录进入治理账本。 |
 | A/B、核心或发布级 Claim 未经 Joe 复核 | 评分 lint | 保留为显式告警，不得作为新的正式发布门槛。 |
 
-当前可执行的基础检查由 `lint-knowledge-base.mjs` 生成 `3-processing/index/governance-lint-report.json`：注册表字段、来源路径、注册表快照、Wiki ID、必填 frontmatter、对象引用、内部链接、release 输出路径，以及 SQS/CCS 账本的来源引用、分数、等级、谱系和复核状态。语义 lint 仍要求结合问题语境进行审查。
+当前可执行的基础检查由 `lint-knowledge-base.mjs` 生成 `3-processing/index/governance-lint-report.json`：Raw/Data/registry 数量与哈希、全量 baseline marker、intake 版本链和批次守恒、NOW 机器计数、Wiki ID、必填 frontmatter、对象引用、内部链接、release 输出路径，以及 SQS/CCS 账本的来源引用、分数、等级、谱系和复核状态。自动发布另以 publish journal 校验基础提交、白名单路径、内容哈希和自有提交；语义 lint 仍要求结合问题语境进行审查。
 
 ## 发布门禁
 

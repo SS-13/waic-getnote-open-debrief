@@ -83,6 +83,8 @@
 | `joe-reviewed` | Joe 已复核评分、理由与边界 |
 | `superseded` | 新版本、反证或更高保真来源已替代原判断 |
 
+进入 `joe-reviewed` 时必须同时记录：`reviewedBy`、`reviewedAt`、`reviewDecision`（`confirmed`、`adjusted` 或 `rejected`）和 `reviewRationale`。确认不自动提高分数；它表示 Joe 接受当前 Claim、适用范围和 Boundary 作为可用口径。
+
 ## 复审触发
 
 | 类别 | 触发条件 |

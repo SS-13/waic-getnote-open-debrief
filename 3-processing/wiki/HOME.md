@@ -1,61 +1,79 @@
-# WAIC LLM Wiki
+---
+id: RESEARCH-DESK
+type: navigation-view
+status: active
+as_of: 2026-08-03
+derived: true
+---
 
-> 这是从原始资料持续长出的语义知识层，不是另一份文章目录。
+# Joe AI Research Desk
+
+> 内容截至：2026-08-03 · 研究范围：WAIC 核心证据，以及被活跃问题实际使用的外部佐证
+>
+> 新输入白名单：Get笔记自建知识库 `JVl2k6DY` 中的普通笔记；订阅博主、订阅内容和直播不导入
+
+当前可见状态：Get笔记白名单已登记历史基线 `1` 条，SQS 账本 `28` 条，核心 Claim 发布阻塞 `0` 条，正式 Brief `0` 份。C008、C009、C010、C014 已由 Joe 确认并保留各自边界。
+
+## 今天值得看
+
+1. [北京智能体政策解读](sources/SRC-AI-001-北京智能体政策解读.md)已贯通新接入链路，SQS 为 `C / 60`。它是得到大脑对二手文章的 AI 整理，只作为政策、FDE 与治理线索。
+2. [半数字化企业中的业务翻译与最小闭环假设](claims/C015-半数字化企业中的业务翻译与最小闭环假设.md)于 8 月 2 日进入 Wiki。当前 CCS 为 `C / 63`，适合作为待验证的方法假设，不能外推为中国企业的普遍事实。
+3. [飞书社区《FDE 人才白皮书》解读](./_indexes/SRC-Q003-18-飞书社区FDE人才白皮书-解读与蜂巢评分.md)已完成全文、表格和图片核读，SQS 为 `C / 64`。它的框架价值高于其中尚未回查的市场数字。
+4. [四条 B 级核心 Claim](reviews/README.md)已由 Joe 确认，可以在各自证据和适用范围内进入后续简报与正式研究。
+
+## 从这里进入
+
+- [最近变化 NOW](NOW.md)：只看新增来源、知识变化、复核变化和发布变化
+- [主题地图](topics/README.md)：WAIC 演进、普通人与应用、AI 治理、FDE/企业 AI
+- [当前问题](#当前问题)：从真实问题进入已有答案
+- [来源视图](sources/README.md)：查看正式接受的来源、SQS 和使用边界
+- [待复核](reviews/README.md)：处理需要 Joe 拍板的核心判断与复审事项
+- [简报](briefings/README.md)：从 Topic、Question 或自然语言问题生成时间快照
+- [正式输出](../../4-outputs/README.md)：报告、PDF、PPT 和 figures
+
+## 四个核心主题
+
+### WAIC 演进
+
+当前判断：2018–2026 年的主线是 AI 的责任半径从可体验功能扩大到内容、工作流、系统调用和物理动作；大会可见性仍不等于社会普及。
+
+[进入主题](topics/TP001-WAIC演进.md) · [当前综合](syntheses/SYN001-2018至2026-WAIC变化的普通人视角.md) · [关键冲突](tensions/T001-大会可见性与社会采用之间的距离.md)
+
+### 普通人与应用
+
+当前判断：软件 Agent 更可能先在可验收、可回滚的数字流程中规模化；普通人将更多成为 AI 的委托者、监督者、被评估者和数据提供者。
+
+[进入主题](topics/TP002-普通人与应用.md) · [当前综合](syntheses/SYN002-AI演进、应用、就业与治理战略综合.md) · [应用与责任冲突](tensions/T002-任务闭环价值与责任半径同步扩大.md)
+
+### AI 治理
+
+当前判断：治理需要从原则前移为贯穿资产、权限、测试、监测、接管、报告和救济的持续控制环。
+
+[进入主题](topics/TP003-AI治理.md) · [治理控制环](concepts/K004-AI治理控制环.md) · [核心 Claim](claims/C009-Agent与物理AI需要持续治理控制环.md)
+
+### FDE 与企业 AI
+
+当前判断：FDE 以生产工程为底座，把业务、数据、权限、模型、采用和持续治理连接成可验证系统；中美差异首先体现在岗位族、平台回流和责任链。
+
+[进入主题](topics/TP004-FDE与企业AI.md) · [当前综合](syntheses/SYN003-FDE中美企业AI部署与治理产业研判.md) · [最新假设](claims/C015-半数字化企业中的业务翻译与最小闭环假设.md)
 
 ## 当前问题
 
-| ID | 问题 | 状态 |
-|---|---|---|
-| [Q001](questions/Q001-历年WAIC的变化，普通人能看到什么.md) | 历年 WAIC 的变化，普通人能看到什么？ | 首轮答案已形成 |
-| [Q002](questions/Q002-AI责任半径扩大后，应用、岗位与治理如何联动.md) | AI 责任半径扩大后，应用、岗位与治理如何联动？ | 可发布综合已形成 |
-| [Q003](questions/Q003-FDE如何将企业转化为可治理的AI运行系统，中美路径有何差异.md) | FDE 如何将企业转化为可治理的 AI 运行系统，中美路径有何差异？ | 可发布综合已形成 |
+- [历年 WAIC 的变化，普通人能看到什么？](questions/Q001-历年WAIC的变化，普通人能看到什么.md)｜首轮答案已形成，`as_of: 2026-07-21`
+- [AI 责任半径扩大后，应用、岗位与治理如何联动？](questions/Q002-AI责任半径扩大后，应用、岗位与治理如何联动.md)｜可发布综合已形成，`as_of: 2026-07-22`
+- [FDE 如何将企业转化为可治理的 AI 运行系统，中美路径有何差异？](questions/Q003-FDE如何将企业转化为可治理的AI运行系统，中美路径有何差异.md)｜可发布综合已形成，最新支持假设更新于 2026-08-02
 
-## 当前综合
+## 如何使用
 
-- [SYN001：2018–2026 WAIC 变化的普通人视角](syntheses/SYN001-2018至2026-WAIC变化的普通人视角.md)
-- [SYN002：AI 演进、应用、就业与治理战略综合](syntheses/SYN002-AI演进、应用、就业与治理战略综合.md)
-- [SYN003：FDE 中美企业 AI 部署与治理产业研判](syntheses/SYN003-FDE中美企业AI部署与治理产业研判.md)
-- [T001：大会可见性与社会采用之间的距离](tensions/T001-大会可见性与社会采用之间的距离.md)
-- [T002：任务闭环价值与责任半径同步扩大](tensions/T002-任务闭环价值与责任半径同步扩大.md)
-- [Q001 首轮 18 份来源](./_indexes/Q001-SOURCES.md)
-- [Q002 应用、岗位与治理来源](./_indexes/Q002-SOURCES.md)
-- [Q003 FDE 与企业 AI 部署来源](./_indexes/Q003-SOURCES.md)
+- 想知道今天有什么变化：从 [NOW](NOW.md) 开始。
+- 想快速理解一个方向：从 [主题地图](topics/README.md) 进入当前判断，再回查 Claim 和 Source。
+- 想获得一份问题导向的材料：按 [简报入口](briefings/README.md) 向 Agent 提出 `简报：<主题或问题> [时间范围]`。
+- 想决定一项判断能否正式使用：先看 [待复核](reviews/README.md) 和 [蜂巢式置信度评分](../governance/CONFIDENCE_SCORING.md)。
 
-## 可复用框架
+## 边界
 
-- [K001：AI 责任半径](concepts/K001-AI责任半径.md)
-- [K002：七级证据成熟度阶梯](concepts/K002-七级证据成熟度阶梯.md)
-- [K003：应用成熟度 L0-L4](concepts/K003-应用成熟度L0-L4.md)
-- [K004：AI 治理控制环](concepts/K004-AI治理控制环.md)
-- [K005：Agent 自治与责任矩阵](concepts/K005-Agent自治与责任矩阵.md)
-- [K006：蜂巢式置信度与证据收敛](concepts/K006-蜂巢式置信度与证据收敛.md)
-
-## 外部研究资料
-
-- [外部研究资料索引](_indexes/EXTERNAL-RESEARCH-SOURCES.md)：FDE 白皮书、赫拉利达沃斯治理表达等非 WAIC 输入的来源卡、评分与使用边界
-- [SRC-Q003-18：飞书社区 FDE 人才白皮书](_indexes/SRC-Q003-18-飞书社区FDE人才白皮书-解读与蜂巢评分.md)：已完成全文、表格和图片核读；SQS C / 64
-
-## 发布与主库接入
-
-- [REL001：WAIC 战略研究报告发布映射](releases/REL001-WAIC战略研究报告发布映射.md)
-- [REL002：FDE 行业报告发布映射](releases/REL002-FDE行业报告发布映射.md)
-- [REL003：蜂巢式知识置信度评分系统发布映射](releases/REL003-蜂巢式知识置信度评分系统发布映射.md)
-- [主知识库接入说明](../governance/MAIN_KB_INTEGRATION.md)：已注册为 `waic-research`，每日 23:38 自检
-
-## 工作入口
-
-- [Wiki schema v0.2](_schema/SCHEMA.md)：对象、证据和 release 映射规则
-- [Governance v1.1](../governance/README.md)：规模化注册、摄取、lint 与发布规范
-- [蜂巢式置信度评分](../governance/CONFIDENCE_SCORING.md)：来源 SQS、Claim CCS、谱系去重与复审规则
-- [蜜蜂选巢读书笔记](_indexes/BOOK-001-达尔文投资知识-蜜蜂选巢笔记.md)：评分体系的机制来源与边界
-- `../index/waic-kb-pull-index.md`：现有来源明细
-- `../../1-raw/`：Get笔记原始来源，只读
-- `../../2-data/`：人工整理与完整逐字稿等补充来源
-- `../../2-data/外部研究资料/`：非 WAIC 的外部研究输入、来源卡与评分边界
-
-## 当前边界
-
-- Wiki 优先回答真实问题，不追求把全部来源加工一遍。
-- Wiki 中的结论必须能回到 `1-raw/` 或 `2-data/` 的具体证据。
-- `3-processing/2026/` 中的既有 MECE 文档暂视为 legacy synthesis，不在本阶段迁移。
-- `4-outputs/` 是发布层，不反向充当事实来源。
+- Research Desk 是从现有账本和 Wiki 对象派生的阅读层，不是第二套事实库。
+- 未评分、低评分和未经 Joe 复核是三种不同状态。
+- Brief、PPT、Roundtable 和 Release 不能反向成为 Claim 的证据。
+- Joe 主动保存一条资料只提高处理优先级，不提高来源 SQS 或相关 Claim 的 CCS。
+- 原始资料核验仍回到 `1-raw/`、`2-data/` 和具体外部原文。

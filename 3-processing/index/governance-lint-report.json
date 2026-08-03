@@ -1,46 +1,35 @@
 {
-  "generatedAt": "2026-08-02T04:10:32.621Z",
+  "generatedAt": "2026-08-03T04:14:24.584Z",
   "passed": true,
   "checks": {
-    "registryRecords": 860,
-    "uniqueSourceIds": 860,
+    "rawEvidenceRecords": 843,
+    "dataEvidenceRecords": 27,
+    "registryRecords": 870,
+    "registryHash": "32de43fbf99a1c18d8ffb70897d1d29d3a74f32a54675cba053afcc11a5de913",
+    "uniqueSourceIds": 870,
+    "uniqueNoteIds": 843,
     "duplicateCanonicalSourceIds": 13,
-    "wikiPages": 41,
-    "wikiIds": 39,
-    "checkedLinks": 182,
+    "wikiPages": 51,
+    "wikiIds": 50,
+    "checkedLinks": 310,
     "sourceAliases": 54,
-    "sourceAssessments": 27,
-    "claimConfidence": 5
+    "sourceAssessments": 28,
+    "claimConfidence": 5,
+    "intakeRecords": 7,
+    "intakeBaselineStatus": "complete",
+    "intakeBaselineScope": "all",
+    "intakeBaselineNoteCount": 5,
+    "intakeBaselineNoteIdsHash": "sha256:7fc4eae284790e91e6e6eb07404d457ee4dd811da1f9e18adc0ea4a29adb1317",
+    "intakeBatches": 3,
+    "pendingTriage": 6,
+    "routedIntakeRecords": 1,
+    "integratedIntakeRecords": 0,
+    "assessedIntakeRecords": 1,
+    "requiredAssessmentRecords": 1,
+    "missingRequiredAssessments": 0,
+    "subscriptionIntakeRecords": 0,
+    "nowLatestBatchId": "BATCH-GETNOTE-0c0c5422cd079fd1"
   },
   "errors": [],
-  "warnings": [
-    {
-      "kind": "unconfirmed-high-impact-claim",
-      "confidenceId": "CC-001",
-      "claimId": "C008",
-      "confidenceBand": "B",
-      "claimImpact": "core"
-    },
-    {
-      "kind": "unconfirmed-high-impact-claim",
-      "confidenceId": "CC-002",
-      "claimId": "C009",
-      "confidenceBand": "B",
-      "claimImpact": "core"
-    },
-    {
-      "kind": "unconfirmed-high-impact-claim",
-      "confidenceId": "CC-003",
-      "claimId": "C010",
-      "confidenceBand": "B",
-      "claimImpact": "core"
-    },
-    {
-      "kind": "unconfirmed-high-impact-claim",
-      "confidenceId": "CC-004",
-      "claimId": "C014",
-      "confidenceBand": "B",
-      "claimImpact": "core"
-    }
-  ]
+  "warnings": []
 }

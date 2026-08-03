@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "knowledgeBaseId": "JVl2k6DY",
+  "knowledgeBaseName": "ai 资讯",
+  "acceptedEndpoint": "knowledge-base-notes",
+  "subscriptionBloggerImport": false,
+  "liveImport": false,
+  "storeLinkedPageFullText": false,
+  "rawDirectory": "1-raw/Joe主动收录/AI资讯",
+  "ledgerPath": "3-processing/index/intake-ledger.jsonl",
+  "baselineStatePath": "3-processing/index/intake-baseline.json",
+  "curator": "Joe",
+  "routes": [
+    {
+      "topicId": "TP003",
+      "questionIds": ["Q002"],
+      "terms": ["治理", "政策", "监管", "安全", "责任", "北京智能体政策"]
+    },
+    {
+      "topicId": "TP004",
+      "questionIds": ["Q003"],
+      "terms": ["FDE", "前沿部署工程师", "企业AI", "企业服务", "Harness"]
+    },
+    {
+      "topicId": "TP002",
+      "questionIds": ["Q001", "Q002"],
+      "terms": ["普通人", "学习", "应用", "终端", "人机协作"]
+    },
+    {
+      "topicId": "TP001",
+      "questionIds": ["Q001"],
+      "terms": ["WAIC", "世界人工智能大会"]
+    }
+  ]
+}
