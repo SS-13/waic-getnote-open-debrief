@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-03T04:02:26.754559+00:00",
+  "generatedAt": "2026-08-12T15:00:00.000Z",
   "schemaVersion": "1.1",
   "registryPath": "3-processing/index/source-registry.jsonl",
-  "registryHash": "32de43fbf99a1c18d8ffb70897d1d29d3a74f32a54675cba053afcc11a5de913",
-  "recordCount": 870,
-  "uniqueSourceIds": 870,
+  "registryHash": "47843058ec2284b32174fc85b0375613402a5522a7a155535faa920f76d93638",
+  "recordCount": 871,
+  "uniqueSourceIds": 871,
   "uniqueNoteIds": 843,
   "byLayer": {
     "raw": 843,
-    "data": 27
+    "data": 28
   },
   "byFidelity": {
     "summary": 7,
     "unknown": 836,
-    "structured": 15,
+    "structured": 16,
     "verbatim": 12
   },
   "duplicateSourceIds": [],

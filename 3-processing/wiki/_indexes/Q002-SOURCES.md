@@ -3,8 +3,8 @@ id: Q002-SOURCES
 type: source-index
 question_ids: [Q002]
 created_at: 2026-07-22
-as_of: 2026-07-22
-source_count: 17
+as_of: 2026-08-12
+source_count: 18
 ---
 
 # Q002 来源索引
@@ -30,6 +30,7 @@ source_count: 17
 | SRC-Q002-15 | 国际组织 | official | 全球 AI 伦理基线 | [UNESCO](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics) |
 | SRC-Q002-16 | 国际组织 | official | 可信 AI 原则与互操作 | [OECD](https://www.oecd.org/en/topics/sub-issues/ai-principles.html) |
 | SRC-Q002-17 | 欧盟官方 | official | 风险分级与高风险系统义务 | [European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) |
+| SRC-EXT-002 | 学术预印本 | structured | LLM、搜索、无工具写作和两条换工具路径的实验边界 | [中文结构化译述](../../../2-data/外部研究资料/2026-08-12__MIT__Your_Brain_on_ChatGPT__实验报告中文版.md)；[论文](https://arxiv.org/abs/2506.08872) |
 
 ## 解释限制
 
@@ -37,3 +38,4 @@ source_count: 17
 - 外部就业来源口径不同，只作方向性三角验证，不合并计算。
 - 论坛材料用于识别治理实践方向；只有正式政策和法规才用于描述法定义务。
 - 企业效率、销量、客户和时间预测继续标注为厂商自报或预测。
+- `SRC-EXT-002` 是未同行评审的教育场景预印本；前三次是三组固定条件，第 4 次仅两条各 `n=9` 的换工具路径，不能外推为所有 LLM 使用结果或独立第四随机组。

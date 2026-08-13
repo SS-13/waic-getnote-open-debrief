@@ -262,6 +262,35 @@ class DailyIntakeDerivationTest(unittest.TestCase):
       batches = MODULE.readJsonl(batchPath)
       self.assertEqual(batches[0]["counts"]["assessed"], 0)
 
+  def test_external_data_source_does_not_rewrite_frozen_getnote_batch(self):
+    with tempfile.TemporaryDirectory() as directory:
+      root = Path(directory)
+      DerivationFixture(root)
+      MODULE.deriveArtifacts(root, "2026-08-03T01:00:00+00:00")
+      batchPath = root / MODULE.BATCH_LEDGER_PATH
+      batchBefore = batchPath.read_bytes()
+
+      externalPath = root / "2-data/外部研究资料/外部论文.md"
+      externalPath.parent.mkdir(parents=True, exist_ok=True)
+      externalPath.write_text(
+        "---\n"
+        "title: 外部论文\n"
+        "canonical_source_id: doi:10.0000/example\n"
+        "fidelity: structured\n"
+        "---\n\n"
+        "# 外部论文\n",
+        encoding="utf-8",
+      )
+
+      result = MODULE.deriveArtifacts(root, "2026-08-04T01:00:00+00:00")
+
+      self.assertEqual(batchPath.read_bytes(), batchBefore)
+      self.assertTrue(result["artifacts"]["registry"])
+      report = json.loads((root / MODULE.LINT_REPORT_PATH).read_text(encoding="utf-8"))
+      self.assertTrue(report["passed"])
+      self.assertEqual(report["checks"]["dataEvidenceRecords"], 1)
+      self.assertEqual(report["checks"]["registryRecords"], 2)
+
   def test_later_triage_change_warns_without_rewriting_frozen_batch(self):
     with tempfile.TemporaryDirectory() as directory:
       root = Path(directory)

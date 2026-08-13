@@ -14,11 +14,11 @@ derived: true
 <!-- workbench:now:auto:start v1 -->
 ## 自动接入状态
 
-<!-- workbench:now:manifest {"assessed":1,"baselineVersions":5,"dataEvidenceRecords":27,"generatedFrom":"3-processing/index/intake-batches.jsonl","intakeBatches":3,"intakeRecords":7,"integrated":0,"knowledgeAsOf":"2026-08-03","latestBatchId":"BATCH-GETNOTE-0c0c5422cd079fd1","missingRequiredAssessments":0,"newSourceVersions":2,"ordinaryNoteIdentities":7,"pendingTriage":6,"rawEvidenceRecords":843,"registryRecords":870,"requiredAssessments":1,"revisionVersions":0,"routed":1,"schemaVersion":"1.0","subscriptionRecords":0} -->
+<!-- workbench:now:manifest {"assessed":1,"baselineVersions":5,"dataEvidenceRecords":28,"generatedFrom":"3-processing/index/intake-batches.jsonl","intakeBatches":3,"intakeRecords":7,"integrated":0,"knowledgeAsOf":"2026-08-03","latestBatchId":"BATCH-GETNOTE-0c0c5422cd079fd1","missingRequiredAssessments":0,"newSourceVersions":2,"ordinaryNoteIdentities":7,"pendingTriage":6,"rawEvidenceRecords":843,"registryRecords":871,"requiredAssessments":1,"revisionVersions":0,"routed":1,"schemaVersion":"1.0","subscriptionRecords":0} -->
 
 - 最近实质批次：`BATCH-GETNOTE-0c0c5422cd079fd1`
 - 知识截止：`2026-08-03`
-- 证据库存：Raw `843`，Data `27`，Registry `870`
+- 证据库存：Raw `843`，Data `28`，Registry `871`
 - 普通笔记：身份 `7`，已存版本 `7`，历史基线 `5`，新增来源 `2`，修订 `0`
 - 分流状态：pending `6`，routed `1`，integrated `0`
 - 评分状态：已评分 `1`，必须评分 `1`，缺失 `0`

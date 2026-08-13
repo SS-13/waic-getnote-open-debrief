@@ -694,9 +694,11 @@ function lintIntakeBatches(
       managedRawVersions: intakeRecords.length,
       intakeRecords: intakeRecords.length,
       rawEvidenceRecords,
-      registryRecords: registryRecords.length,
     };
-    if (stableJson(previousBatch.after || {}) !== stableJson(expectedAfter)) {
+    const actualAfter = Object.fromEntries(
+      Object.entries(expectedAfter).map(([field]) => [field, previousBatch.after?.[field]]),
+    );
+    if (stableJson(actualAfter) !== stableJson(expectedAfter)) {
       errors.push({ kind: "intake-batch-final-counts", batchId: previousBatch.batchId, expected: expectedAfter, actual: previousBatch.after });
     }
   } else if (intakeRecords.length > 0) {

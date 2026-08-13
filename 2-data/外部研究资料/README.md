@@ -10,5 +10,6 @@
 |---|---|---|---|
 | 飞书社区《FDE 人才白皮书》 | FDE、企业 AI 部署、中美差异 | 已解读，SQS C | [来源卡](2026-08-02__飞书社区FDE人才白皮书__来源卡.md) |
 | 赫拉利达沃斯 AI 治理表达 | Agent、治理、教育与跨境责任 | 已评分，SQS B | [来源卡](2026-07-27__赫拉利达沃斯AI治理表达__来源卡.md) |
+| 《Your Brain on ChatGPT》实验报告 | LLM、搜索、无工具写作的 EEG 与回忆/归属感 | 已解读，SQS A（预印本） | [中文版来源卡](2026-08-12__MIT__Your_Brain_on_ChatGPT__实验报告中文版.md) |
 
 统一索引：[外部研究资料索引](../../3-processing/wiki/_indexes/EXTERNAL-RESEARCH-SOURCES.md)。
